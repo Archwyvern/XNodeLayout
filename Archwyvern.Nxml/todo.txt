@@ -1,0 +1,17 @@
+Godot.Collections.Array`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+Godot.Collections.Array`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+Godot.Collections.Dictionary
+Godot.SyntaxHighlighter
+Godot.Collections.Array
+Godot.NodePath
+Godot.Node
+Godot.Theme
+Godot.Material
+Godot.Texture2D
+Godot.ButtonGroup
+Godot.Shortcut
+Godot.LabelSettings
+System.Single[]
+Godot.Rect2
+Godot.Bitmap
+Godot.VideoStream

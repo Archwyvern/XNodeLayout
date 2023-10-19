@@ -1,0 +1,12 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.1.1">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Archwyvern.Nxml\Archwyvern.Nxml.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Hud.Nxml" />
+  </ItemGroup>
+</Project>
