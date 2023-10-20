@@ -1,22 +1,23 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
 namespace Archwyvern.Nxml.Generate;
+
+public struct TypeEntry
+{
+    public Type Type;
+    public Type Ancestor;
+}
 
 public class TemplateBuilder
 {
     private string _namespace;
     private List<TypeEntry> _entries = new();
     private Dictionary<Type, string> _translators = new();
-
-    private struct TypeEntry
-    {
-        public Type Type;
-        public Type Ancestor;
-    }
 
     public TemplateBuilder(string ns)
     {
@@ -37,15 +38,58 @@ public class TemplateBuilder
         _translators.Add(type, translator);
     }
 
-    public List<Template> GetTemplates()
+    public IEnumerable<Template> GetTemplates()
     {
-        var templates = new List<Template>();
+        var templates = new Dictionary<Type, Template>();
 
-        foreach (TypeEntry entry in _entries) {
-            templates.Add(ProcessEntry(entry));
+        var processedTypes = new HashSet<Type>();
+        var entries = _entries;
+
+        do {
+            var resources = new HashSet<TypeEntry>();
+
+            foreach (TypeEntry entry in entries) {
+                if (!entry.Type.CanInstantiate()) {
+                    continue;
+                }
+
+                if (processedTypes.Contains(entry.Type)) {
+                    continue;
+                }
+
+                processedTypes.Add(entry.Type);
+
+                var template = ProcessEntry(entry);
+
+                foreach (var resourceType in template.ResourceTypes) {
+                    resources.Add(new() { Type = resourceType, Ancestor = typeof(Resource) });
+
+                    foreach (var resourceSubType in Assembly.GetAssembly(resourceType).GetTypes()) {
+                        if (resourceSubType.IsSubclassOf(resourceType) && resourceSubType.CanInstantiate()) {
+                            resources.Add(new() { Type = resourceSubType, Ancestor = typeof(Resource) });
+                        }
+                    }
+                }
+
+                templates.Add(entry.Type, template);
+            }
+
+            entries = resources.ToList();
+        } while(entries.Count > 0);
+
+        foreach (var template in templates.Values) {
+            foreach (var element in template.Elements.Values) {
+                if (element.SubTypes == null) {
+                    continue;
+                }
+
+                foreach (var type in element.SubTypes) {
+                    element.SubTypeTemplates.Add(templates[type]);
+                }
+            }
         }
 
-        return templates;
+        return templates.Values;
     }
 
     private Template ProcessEntry(TypeEntry entry, Template inherits = null)
@@ -99,6 +143,17 @@ public class TemplateBuilder
             template.OverloadedAttributes[name] = new() {
                 Type = translator,
                 Name = name
+            };
+
+            return;
+        }
+
+        if (type.IsAssignableTo(typeof(Resource))) {
+            template.ResourceTypes.Add(type);
+            template.Elements[name] = new() {
+                Type = type,
+                Name = name,
+                SubTypes = type.GetInstantiatableVariants().ToList()
             };
 
             return;

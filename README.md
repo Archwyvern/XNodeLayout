@@ -1,5 +1,5 @@
-XML Markup Language for Godot UI
-================================
+XML Markup Language for Godot Objects
+=====================================
 
 This is a work in progress to bring an XML driven node structure for scene creation.
 As the title suggests, this is starting with control nodes only for simplicity.
@@ -7,23 +7,65 @@ As the title suggests, this is starting with control nodes only for simplicity.
 You can create any control element with the basic properties (see issues).
 
 Issues:
-- Not all property types are supports yet, only scalar, enums and a few variant types
+- Not all property types are supports yet, only scalar, enums, resources and a few variant types
 - You cannot yet create your own derived tags, but this may be supported when turning the project into a source generator.
 
 Example
 -------
 
-### Nxml
+### Xml
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<PanelContainer xmlns="http://archwyvern.com/xsd/Nxml"
-					Position="50,50"
-					Size="1000,500">
-		<HFlowContainer>
-			<Button Text="Hello, World!" />
-			<Button Text="Goodbye World!" />
-		</HFlowContainer>
-	</PanelContainer>
+    <NodeLayout xmlns="http://archwyvern.com/xsd/nxml">
+        <PanelContainer Position="200,200" Size="400,400">
+            <CenterContainer>
+                <Button Alignment="Center" IconAlignment="Center" VerticalIconAlignment="Top">
+                    <Button.Text>Hello World!</Button.Text>
+                    <Button.Icon>
+                        <CompressedTexture2D ResourcePath="res://icon.svg" />
+                    </Button.Icon>
+                </Button>
+            </CenterContainer>
+        </PanelContainer>
+    </NodeLayout>
+
+### C#
+
+    using Archwyvern.Nxml;
+    using Godot;
+
+    namespace Archwyvern.Project;
+
+    public partial class Main : Node2D
+    {
+        private SerializationManager.Initializer _initializer;
+
+        public override void _Ready()
+        {
+            // The serializer takes a while to build, but runs in the background.
+            // Once built, it doesn't need to do so again.
+            SerializationManager.Initialize(LoadUI);
+        }
+
+        private void LoadUI(double loadTime) // or just LoadUI()
+        {
+            GD.Print("Serializer assembly time: " + loadTime); // ~1.95
+
+            // Load your XML file and get the node layout from the serialization manager.
+            // This process may soon include a custom resource to load with GD.Load<XNodeLayout>();
+
+            var file = Godot.FileAccess.Open("res://data/Hud.nxml", Godot.FileAccess.ModeFlags.Read);
+            var layout = SerializationManager.GetNodeLayout(file.GetAsText());
+
+            double generateTime = Time.GetUnixTimeFromSystem();
+
+            // The layout is a populated DTO containing all the raw data needed to create a node.
+            var node = layout.Generate();
+
+            GD.Print("Node generation time: " + (Time.GetUnixTimeFromSystem() - generateTime)); // ~0.008
+
+            AddChild(node);
+        }
+    }
 
 ### Output
 

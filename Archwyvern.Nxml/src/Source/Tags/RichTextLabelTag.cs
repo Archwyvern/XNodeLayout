@@ -2,353 +2,657 @@
 namespace Archwyvern.Nxml.Tags
 {
     [System.Xml.Serialization.XmlRoot(ElementName = "RichTextLabel", Namespace = "http://archwyvern.com/xsd/nxml")]
-    public class RichTextLabelTag : Archwyvern.Nxml.Tag
+    public class RichTextLabelTag : Archwyvern.Nxml.BaseNodeTag
     {
 #nullable enable
-        // Simple Fields
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "BbcodeEnabled")] public string _Surrogate_BbcodeEnabled {
+        public static class ElementProperty
+        {
+            [System.Xml.Serialization.XmlType(TypeName = "RichTextLabel.ElementProperty.Theme")] public class Theme
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "Theme", Type = typeof(ThemeTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "RichTextLabel.ElementProperty.Material")] public class Material
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasItemMaterial", Type = typeof(CanvasItemMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "FogMaterial", Type = typeof(FogMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Material", Type = typeof(MaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "OrmMaterial3D", Type = typeof(OrmMaterial3DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PanoramaSkyMaterial", Type = typeof(PanoramaSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ParticleProcessMaterial", Type = typeof(ParticleProcessMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PhysicalSkyMaterial", Type = typeof(PhysicalSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderMaterial", Type = typeof(PlaceholderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ProceduralSkyMaterial", Type = typeof(ProceduralSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ShaderMaterial", Type = typeof(ShaderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "StandardMaterial3D", Type = typeof(StandardMaterial3DTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+        }
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Theme => _Surrogate_Element_Theme?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Theme")] public RichTextLabelTag.ElementProperty.Theme? _Surrogate_Element_Theme;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Material => _Surrogate_Element_Material?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Material")] public RichTextLabelTag.ElementProperty.Material? _Surrogate_Element_Material;
+
+        // Simple Attributes
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "BbcodeEnabled")] public string _Surrogate_Attribute_BbcodeEnabled {
             get => BbcodeEnabled != null ? ((System.Boolean)BbcodeEnabled).ToString() : "";
-            set => BbcodeEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { BbcodeEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? BbcodeEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Text")] public string _Surrogate_Text {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.BbcodeEnabled")] public string _Surrogate_Element_BbcodeEnabled {
+            get => BbcodeEnabled != null ? ((System.Boolean)BbcodeEnabled).ToString() : "";
+            set { if (value != "") { BbcodeEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? BbcodeEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Text")] public string _Surrogate_Attribute_Text {
             get => Text != null ? ((System.String)Text).ToString() : "";
-            set => Text = value != "" ? value : null;
+            set { if (value != "") { Text = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? Text;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FitContent")] public string _Surrogate_FitContent {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Text")] public string _Surrogate_Element_Text {
+            get => Text != null ? ((System.String)Text).ToString() : "";
+            set { if (value != "") { Text = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? Text { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FitContent")] public string _Surrogate_Attribute_FitContent {
             get => FitContent != null ? ((System.Boolean)FitContent).ToString() : "";
-            set => FitContent = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { FitContent = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FitContent;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ScrollActive")] public string _Surrogate_ScrollActive {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.FitContent")] public string _Surrogate_Element_FitContent {
+            get => FitContent != null ? ((System.Boolean)FitContent).ToString() : "";
+            set { if (value != "") { FitContent = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FitContent { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ScrollActive")] public string _Surrogate_Attribute_ScrollActive {
             get => ScrollActive != null ? ((System.Boolean)ScrollActive).ToString() : "";
-            set => ScrollActive = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ScrollActive = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ScrollActive;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ScrollFollowing")] public string _Surrogate_ScrollFollowing {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ScrollActive")] public string _Surrogate_Element_ScrollActive {
+            get => ScrollActive != null ? ((System.Boolean)ScrollActive).ToString() : "";
+            set { if (value != "") { ScrollActive = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ScrollActive { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ScrollFollowing")] public string _Surrogate_Attribute_ScrollFollowing {
             get => ScrollFollowing != null ? ((System.Boolean)ScrollFollowing).ToString() : "";
-            set => ScrollFollowing = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ScrollFollowing = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ScrollFollowing;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutowrapMode")] public string _Surrogate_AutowrapMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ScrollFollowing")] public string _Surrogate_Element_ScrollFollowing {
+            get => ScrollFollowing != null ? ((System.Boolean)ScrollFollowing).ToString() : "";
+            set { if (value != "") { ScrollFollowing = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ScrollFollowing { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutowrapMode")] public string _Surrogate_Attribute_AutowrapMode {
             get => AutowrapMode != null ? ((Godot.TextServer.AutowrapMode)AutowrapMode).ToString() : "";
-            set => AutowrapMode = value != "" ? System.Enum.Parse<Godot.TextServer.AutowrapMode>(value) : null;
+            set { if (value != "") { AutowrapMode = System.Enum.Parse<Godot.TextServer.AutowrapMode>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.AutowrapMode? AutowrapMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TabSize")] public string _Surrogate_TabSize {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AutowrapMode")] public string _Surrogate_Element_AutowrapMode {
+            get => AutowrapMode != null ? ((Godot.TextServer.AutowrapMode)AutowrapMode).ToString() : "";
+            set { if (value != "") { AutowrapMode = System.Enum.Parse<Godot.TextServer.AutowrapMode>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.AutowrapMode? AutowrapMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TabSize")] public string _Surrogate_Attribute_TabSize {
             get => TabSize != null ? ((System.Int32)TabSize).ToString() : "";
-            set => TabSize = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { TabSize = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? TabSize;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ContextMenuEnabled")] public string _Surrogate_ContextMenuEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TabSize")] public string _Surrogate_Element_TabSize {
+            get => TabSize != null ? ((System.Int32)TabSize).ToString() : "";
+            set { if (value != "") { TabSize = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? TabSize { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ContextMenuEnabled")] public string _Surrogate_Attribute_ContextMenuEnabled {
             get => ContextMenuEnabled != null ? ((System.Boolean)ContextMenuEnabled).ToString() : "";
-            set => ContextMenuEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ContextMenuEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ContextMenuEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutKeysEnabled")] public string _Surrogate_ShortcutKeysEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ContextMenuEnabled")] public string _Surrogate_Element_ContextMenuEnabled {
+            get => ContextMenuEnabled != null ? ((System.Boolean)ContextMenuEnabled).ToString() : "";
+            set { if (value != "") { ContextMenuEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ContextMenuEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutKeysEnabled")] public string _Surrogate_Attribute_ShortcutKeysEnabled {
             get => ShortcutKeysEnabled != null ? ((System.Boolean)ShortcutKeysEnabled).ToString() : "";
-            set => ShortcutKeysEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShortcutKeysEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutKeysEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MetaUnderlined")] public string _Surrogate_MetaUnderlined {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ShortcutKeysEnabled")] public string _Surrogate_Element_ShortcutKeysEnabled {
+            get => ShortcutKeysEnabled != null ? ((System.Boolean)ShortcutKeysEnabled).ToString() : "";
+            set { if (value != "") { ShortcutKeysEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutKeysEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MetaUnderlined")] public string _Surrogate_Attribute_MetaUnderlined {
             get => MetaUnderlined != null ? ((System.Boolean)MetaUnderlined).ToString() : "";
-            set => MetaUnderlined = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { MetaUnderlined = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MetaUnderlined;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "HintUnderlined")] public string _Surrogate_HintUnderlined {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.MetaUnderlined")] public string _Surrogate_Element_MetaUnderlined {
+            get => MetaUnderlined != null ? ((System.Boolean)MetaUnderlined).ToString() : "";
+            set { if (value != "") { MetaUnderlined = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MetaUnderlined { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "HintUnderlined")] public string _Surrogate_Attribute_HintUnderlined {
             get => HintUnderlined != null ? ((System.Boolean)HintUnderlined).ToString() : "";
-            set => HintUnderlined = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { HintUnderlined = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? HintUnderlined;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Threaded")] public string _Surrogate_Threaded {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.HintUnderlined")] public string _Surrogate_Element_HintUnderlined {
+            get => HintUnderlined != null ? ((System.Boolean)HintUnderlined).ToString() : "";
+            set { if (value != "") { HintUnderlined = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? HintUnderlined { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Threaded")] public string _Surrogate_Attribute_Threaded {
             get => Threaded != null ? ((System.Boolean)Threaded).ToString() : "";
-            set => Threaded = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Threaded = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Threaded;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProgressBarDelay")] public string _Surrogate_ProgressBarDelay {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Threaded")] public string _Surrogate_Element_Threaded {
+            get => Threaded != null ? ((System.Boolean)Threaded).ToString() : "";
+            set { if (value != "") { Threaded = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Threaded { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProgressBarDelay")] public string _Surrogate_Attribute_ProgressBarDelay {
             get => ProgressBarDelay != null ? ((System.Int32)ProgressBarDelay).ToString() : "";
-            set => ProgressBarDelay = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProgressBarDelay = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProgressBarDelay;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SelectionEnabled")] public string _Surrogate_SelectionEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProgressBarDelay")] public string _Surrogate_Element_ProgressBarDelay {
+            get => ProgressBarDelay != null ? ((System.Int32)ProgressBarDelay).ToString() : "";
+            set { if (value != "") { ProgressBarDelay = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProgressBarDelay { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SelectionEnabled")] public string _Surrogate_Attribute_SelectionEnabled {
             get => SelectionEnabled != null ? ((System.Boolean)SelectionEnabled).ToString() : "";
-            set => SelectionEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { SelectionEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? SelectionEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "DeselectOnFocusLossEnabled")] public string _Surrogate_DeselectOnFocusLossEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.SelectionEnabled")] public string _Surrogate_Element_SelectionEnabled {
+            get => SelectionEnabled != null ? ((System.Boolean)SelectionEnabled).ToString() : "";
+            set { if (value != "") { SelectionEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? SelectionEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "DeselectOnFocusLossEnabled")] public string _Surrogate_Attribute_DeselectOnFocusLossEnabled {
             get => DeselectOnFocusLossEnabled != null ? ((System.Boolean)DeselectOnFocusLossEnabled).ToString() : "";
-            set => DeselectOnFocusLossEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { DeselectOnFocusLossEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? DeselectOnFocusLossEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleCharacters")] public string _Surrogate_VisibleCharacters {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.DeselectOnFocusLossEnabled")] public string _Surrogate_Element_DeselectOnFocusLossEnabled {
+            get => DeselectOnFocusLossEnabled != null ? ((System.Boolean)DeselectOnFocusLossEnabled).ToString() : "";
+            set { if (value != "") { DeselectOnFocusLossEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? DeselectOnFocusLossEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleCharacters")] public string _Surrogate_Attribute_VisibleCharacters {
             get => VisibleCharacters != null ? ((System.Int32)VisibleCharacters).ToString() : "";
-            set => VisibleCharacters = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { VisibleCharacters = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? VisibleCharacters;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleCharactersBehavior")] public string _Surrogate_VisibleCharactersBehavior {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.VisibleCharacters")] public string _Surrogate_Element_VisibleCharacters {
+            get => VisibleCharacters != null ? ((System.Int32)VisibleCharacters).ToString() : "";
+            set { if (value != "") { VisibleCharacters = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? VisibleCharacters { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleCharactersBehavior")] public string _Surrogate_Attribute_VisibleCharactersBehavior {
             get => VisibleCharactersBehavior != null ? ((Godot.TextServer.VisibleCharactersBehavior)VisibleCharactersBehavior).ToString() : "";
-            set => VisibleCharactersBehavior = value != "" ? System.Enum.Parse<Godot.TextServer.VisibleCharactersBehavior>(value) : null;
+            set { if (value != "") { VisibleCharactersBehavior = System.Enum.Parse<Godot.TextServer.VisibleCharactersBehavior>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.VisibleCharactersBehavior? VisibleCharactersBehavior;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleRatio")] public string _Surrogate_VisibleRatio {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.VisibleCharactersBehavior")] public string _Surrogate_Element_VisibleCharactersBehavior {
+            get => VisibleCharactersBehavior != null ? ((Godot.TextServer.VisibleCharactersBehavior)VisibleCharactersBehavior).ToString() : "";
+            set { if (value != "") { VisibleCharactersBehavior = System.Enum.Parse<Godot.TextServer.VisibleCharactersBehavior>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.VisibleCharactersBehavior? VisibleCharactersBehavior { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibleRatio")] public string _Surrogate_Attribute_VisibleRatio {
             get => VisibleRatio != null ? ((System.Single)VisibleRatio).ToString() : "";
-            set => VisibleRatio = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { VisibleRatio = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? VisibleRatio;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextDirection")] public string _Surrogate_TextDirection {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.VisibleRatio")] public string _Surrogate_Element_VisibleRatio {
+            get => VisibleRatio != null ? ((System.Single)VisibleRatio).ToString() : "";
+            set { if (value != "") { VisibleRatio = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? VisibleRatio { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextDirection")] public string _Surrogate_Attribute_TextDirection {
             get => TextDirection != null ? ((Godot.Control.TextDirection)TextDirection).ToString() : "";
-            set => TextDirection = value != "" ? System.Enum.Parse<Godot.Control.TextDirection>(value) : null;
+            set { if (value != "") { TextDirection = System.Enum.Parse<Godot.Control.TextDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.TextDirection? TextDirection;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Language")] public string _Surrogate_Language {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TextDirection")] public string _Surrogate_Element_TextDirection {
+            get => TextDirection != null ? ((Godot.Control.TextDirection)TextDirection).ToString() : "";
+            set { if (value != "") { TextDirection = System.Enum.Parse<Godot.Control.TextDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.TextDirection? TextDirection { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Language")] public string _Surrogate_Attribute_Language {
             get => Language != null ? ((System.String)Language).ToString() : "";
-            set => Language = value != "" ? value : null;
+            set { if (value != "") { Language = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? Language;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StructuredTextBidiOverride")] public string _Surrogate_StructuredTextBidiOverride {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Language")] public string _Surrogate_Element_Language {
+            get => Language != null ? ((System.String)Language).ToString() : "";
+            set { if (value != "") { Language = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? Language { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StructuredTextBidiOverride")] public string _Surrogate_Attribute_StructuredTextBidiOverride {
             get => StructuredTextBidiOverride != null ? ((Godot.TextServer.StructuredTextParser)StructuredTextBidiOverride).ToString() : "";
-            set => StructuredTextBidiOverride = value != "" ? System.Enum.Parse<Godot.TextServer.StructuredTextParser>(value) : null;
+            set { if (value != "") { StructuredTextBidiOverride = System.Enum.Parse<Godot.TextServer.StructuredTextParser>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.StructuredTextParser? StructuredTextBidiOverride;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_ClipContents {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.StructuredTextBidiOverride")] public string _Surrogate_Element_StructuredTextBidiOverride {
+            get => StructuredTextBidiOverride != null ? ((Godot.TextServer.StructuredTextParser)StructuredTextBidiOverride).ToString() : "";
+            set { if (value != "") { StructuredTextBidiOverride = System.Enum.Parse<Godot.TextServer.StructuredTextParser>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.TextServer.StructuredTextParser? StructuredTextBidiOverride { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_Attribute_ClipContents {
             get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
-            set => ClipContents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_LayoutDirection {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ClipContents")] public string _Surrogate_Element_ClipContents {
+            get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_Attribute_LayoutDirection {
             get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
-            set => LayoutDirection = value != "" ? System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value) : null;
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_LayoutMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.LayoutDirection")] public string _Surrogate_Element_LayoutDirection {
+            get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_Attribute_LayoutMode {
             get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
-            set => LayoutMode = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_AnchorsPreset {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.LayoutMode")] public string _Surrogate_Element_LayoutMode {
+            get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_Attribute_AnchorsPreset {
             get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
-            set => AnchorsPreset = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_AnchorLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AnchorsPreset")] public string _Surrogate_Element_AnchorsPreset {
+            get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_Attribute_AnchorLeft {
             get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
-            set => AnchorLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_AnchorTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AnchorLeft")] public string _Surrogate_Element_AnchorLeft {
+            get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_Attribute_AnchorTop {
             get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
-            set => AnchorTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_AnchorRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AnchorTop")] public string _Surrogate_Element_AnchorTop {
+            get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_Attribute_AnchorRight {
             get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
-            set => AnchorRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_AnchorBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AnchorRight")] public string _Surrogate_Element_AnchorRight {
+            get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_Attribute_AnchorBottom {
             get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
-            set => AnchorBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_OffsetLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AnchorBottom")] public string _Surrogate_Element_AnchorBottom {
+            get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_Attribute_OffsetLeft {
             get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
-            set => OffsetLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_OffsetTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.OffsetLeft")] public string _Surrogate_Element_OffsetLeft {
+            get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_Attribute_OffsetTop {
             get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
-            set => OffsetTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_OffsetRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.OffsetTop")] public string _Surrogate_Element_OffsetTop {
+            get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_Attribute_OffsetRight {
             get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
-            set => OffsetRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_OffsetBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.OffsetRight")] public string _Surrogate_Element_OffsetRight {
+            get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_Attribute_OffsetBottom {
             get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
-            set => OffsetBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_GrowHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.OffsetBottom")] public string _Surrogate_Element_OffsetBottom {
+            get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_Attribute_GrowHorizontal {
             get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
-            set => GrowHorizontal = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_GrowVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.GrowHorizontal")] public string _Surrogate_Element_GrowHorizontal {
+            get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_Attribute_GrowVertical {
             get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
-            set => GrowVertical = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Rotation {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.GrowVertical")] public string _Surrogate_Element_GrowVertical {
+            get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Attribute_Rotation {
             get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
-            set => Rotation = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_RotationDegrees {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Rotation")] public string _Surrogate_Element_Rotation {
+            get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_Attribute_RotationDegrees {
             get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
-            set => RotationDegrees = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_SizeFlagsHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.RotationDegrees")] public string _Surrogate_Element_RotationDegrees {
+            get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_Attribute_SizeFlagsHorizontal {
             get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
-            set => SizeFlagsHorizontal = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_SizeFlagsVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.SizeFlagsHorizontal")] public string _Surrogate_Element_SizeFlagsHorizontal {
+            get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_Attribute_SizeFlagsVertical {
             get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
-            set => SizeFlagsVertical = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_SizeFlagsStretchRatio {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.SizeFlagsVertical")] public string _Surrogate_Element_SizeFlagsVertical {
+            get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_Attribute_SizeFlagsStretchRatio {
             get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
-            set => SizeFlagsStretchRatio = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_AutoTranslate {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.SizeFlagsStretchRatio")] public string _Surrogate_Element_SizeFlagsStretchRatio {
+            get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_Attribute_AutoTranslate {
             get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
-            set => AutoTranslate = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_LocalizeNumeralSystem {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.AutoTranslate")] public string _Surrogate_Element_AutoTranslate {
+            get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_Attribute_LocalizeNumeralSystem {
             get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
-            set => LocalizeNumeralSystem = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_TooltipText {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.LocalizeNumeralSystem")] public string _Surrogate_Element_LocalizeNumeralSystem {
+            get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_Attribute_TooltipText {
             get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
-            set => TooltipText = value != "" ? value : null;
+            set { if (value != "") { TooltipText = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_FocusMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TooltipText")] public string _Surrogate_Element_TooltipText {
+            get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
+            set { if (value != "") { TooltipText = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_Attribute_FocusMode {
             get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
-            set => FocusMode = value != "" ? System.Enum.Parse<Godot.Control.FocusModeEnum>(value) : null;
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_MouseFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.FocusMode")] public string _Surrogate_Element_FocusMode {
+            get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_Attribute_MouseFilter {
             get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
-            set => MouseFilter = value != "" ? System.Enum.Parse<Godot.Control.MouseFilterEnum>(value) : null;
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_MouseForcePassScrollEvents {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.MouseFilter")] public string _Surrogate_Element_MouseFilter {
+            get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_Attribute_MouseForcePassScrollEvents {
             get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
-            set => MouseForcePassScrollEvents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_MouseDefaultCursorShape {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.MouseForcePassScrollEvents")] public string _Surrogate_Element_MouseForcePassScrollEvents {
+            get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_Attribute_MouseDefaultCursorShape {
             get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
-            set => MouseDefaultCursorShape = value != "" ? System.Enum.Parse<Godot.Control.CursorShape>(value) : null;
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Visible {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.MouseDefaultCursorShape")] public string _Surrogate_Element_MouseDefaultCursorShape {
+            get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Attribute_Visible {
             get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
-            set => Visible = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_ShowBehindParent {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.Visible")] public string _Surrogate_Element_Visible {
+            get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_Attribute_ShowBehindParent {
             get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
-            set => ShowBehindParent = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_TopLevel {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ShowBehindParent")] public string _Surrogate_Element_ShowBehindParent {
+            get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_Attribute_TopLevel {
             get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
-            set => TopLevel = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_ClipChildren {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TopLevel")] public string _Surrogate_Element_TopLevel {
+            get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_Attribute_ClipChildren {
             get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
-            set => ClipChildren = value != "" ? System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value) : null;
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_LightMask {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ClipChildren")] public string _Surrogate_Element_ClipChildren {
+            get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_Attribute_LightMask {
             get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
-            set => LightMask = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_VisibilityLayer {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.LightMask")] public string _Surrogate_Element_LightMask {
+            get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_Attribute_VisibilityLayer {
             get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
-            set => VisibilityLayer = value != "" ? System.UInt32.Parse(value) : null;
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_ZIndex {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.VisibilityLayer")] public string _Surrogate_Element_VisibilityLayer {
+            get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_Attribute_ZIndex {
             get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
-            set => ZIndex = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_ZAsRelative {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ZIndex")] public string _Surrogate_Element_ZIndex {
+            get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_Attribute_ZAsRelative {
             get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
-            set => ZAsRelative = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_YSortEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ZAsRelative")] public string _Surrogate_Element_ZAsRelative {
+            get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_Attribute_YSortEnabled {
             get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
-            set => YSortEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_TextureFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.YSortEnabled")] public string _Surrogate_Element_YSortEnabled {
+            get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_Attribute_TextureFilter {
             get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
-            set => TextureFilter = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value) : null;
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_TextureRepeat {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TextureFilter")] public string _Surrogate_Element_TextureFilter {
+            get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_Attribute_TextureRepeat {
             get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
-            set => TextureRepeat = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value) : null;
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_UseParentMaterial {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.TextureRepeat")] public string _Surrogate_Element_TextureRepeat {
+            get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_Attribute_UseParentMaterial {
             get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
-            set => UseParentMaterial = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_UniqueNameInOwner {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.UseParentMaterial")] public string _Surrogate_Element_UseParentMaterial {
+            get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_Attribute_UniqueNameInOwner {
             get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
-            set => UniqueNameInOwner = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_SceneFilePath {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.UniqueNameInOwner")] public string _Surrogate_Element_UniqueNameInOwner {
+            get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_Attribute_SceneFilePath {
             get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
-            set => SceneFilePath = value != "" ? value : null;
+            set { if (value != "") { SceneFilePath = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_ProcessMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.SceneFilePath")] public string _Surrogate_Element_SceneFilePath {
+            get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
+            set { if (value != "") { SceneFilePath = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_Attribute_ProcessMode {
             get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
-            set => ProcessMode = value != "" ? System.Enum.Parse<Godot.Node.ProcessModeEnum>(value) : null;
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_ProcessPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessMode")] public string _Surrogate_Element_ProcessMode {
+            get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_Attribute_ProcessPriority {
             get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
-            set => ProcessPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_ProcessPhysicsPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessPriority")] public string _Surrogate_Element_ProcessPriority {
+            get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_Attribute_ProcessPhysicsPriority {
             get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
-            set => ProcessPhysicsPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_ProcessThreadGroup {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessPhysicsPriority")] public string _Surrogate_Element_ProcessPhysicsPriority {
+            get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_Attribute_ProcessThreadGroup {
             get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
-            set => ProcessThreadGroup = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value) : null;
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_ProcessThreadGroupOrder {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessThreadGroup")] public string _Surrogate_Element_ProcessThreadGroup {
+            get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_Attribute_ProcessThreadGroupOrder {
             get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
-            set => ProcessThreadGroupOrder = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_ProcessThreadMessages {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessThreadGroupOrder")] public string _Surrogate_Element_ProcessThreadGroupOrder {
+            get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_Attribute_ProcessThreadMessages {
             get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
-            set => ProcessThreadMessages = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value) : null;
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_EditorDescription {
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.ProcessThreadMessages")] public string _Surrogate_Element_ProcessThreadMessages {
+            get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_Attribute_EditorDescription {
             get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
-            set => EditorDescription = value != "" ? value : null;
+            set { if (value != "") { EditorDescription = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription;
+        [System.Xml.Serialization.XmlElement(ElementName = "RichTextLabel.EditorDescription")] public string _Surrogate_Element_EditorDescription {
+            get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
+            set { if (value != "") { EditorDescription = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription { get; set; }
 #nullable disable
 
-        // Overloaded Fields
+        // Overloaded Attributes
         [System.Xml.Serialization.XmlAttribute(AttributeName = "CustomMinimumSize")] public string _Surrogate_CustomMinimumSize {
             get => CustomMinimumSize != null ? ((Archwyvern.Nxml.Translators.Vector2)CustomMinimumSize).ToString() : "";
             set => CustomMinimumSize = value != "" ? value : null;
@@ -400,10 +704,12 @@ namespace Archwyvern.Nxml.Tags
         }
         [System.Xml.Serialization.XmlIgnore] public Archwyvern.Nxml.Translators.StringName? Name;
 
-        public override Godot.Node CreateNode()
+        internal override Godot.GodotObject CreateObject(Godot.GodotObject alt = null)
         {
-            var obj = new Godot.RichTextLabel();
+            if (alt != null && alt is not Godot.RichTextLabel) return alt;
+            var obj = (Godot.RichTextLabel)alt ?? new Godot.RichTextLabel();
 
+            // Attributes
             if (BbcodeEnabled != null) obj.BbcodeEnabled = (System.Boolean)BbcodeEnabled;
             if (Text != null) obj.Text = (System.String)Text;
             if (FitContent != null) obj.FitContent = (System.Boolean)FitContent;
@@ -472,6 +778,7 @@ namespace Archwyvern.Nxml.Tags
             if (ProcessThreadGroupOrder != null) obj.ProcessThreadGroupOrder = (System.Int32)ProcessThreadGroupOrder;
             if (ProcessThreadMessages != null) obj.ProcessThreadMessages = (Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages;
             if (EditorDescription != null) obj.EditorDescription = (System.String)EditorDescription;
+            // Overloaded Attributes
             if (CustomMinimumSize != null) obj.CustomMinimumSize = (Archwyvern.Nxml.Translators.Vector2)CustomMinimumSize;
             if (Size != null) obj.Size = (Archwyvern.Nxml.Translators.Vector2)Size;
             if (Position != null) obj.Position = (Archwyvern.Nxml.Translators.Vector2)Position;
@@ -482,6 +789,21 @@ namespace Archwyvern.Nxml.Tags
             if (Modulate != null) obj.Modulate = (Archwyvern.Nxml.Translators.Color)Modulate;
             if (SelfModulate != null) obj.SelfModulate = (Archwyvern.Nxml.Translators.Color)SelfModulate;
             if (Name != null) obj.Name = (Archwyvern.Nxml.Translators.StringName)Name;
+            // Elements
+            if (Theme != null) {
+                if (((IResourceTag)Theme).ResourcePath != null) {
+                    obj.Theme = (Godot.Theme)Theme.Generate(Godot.GD.Load<Godot.Theme>(((IResourceTag)Theme).ResourcePath));
+                } else {
+                    obj.Theme = (Godot.Theme)Theme.Generate();
+                }
+            }
+            if (Material != null) {
+                if (((IResourceTag)Material).ResourcePath != null) {
+                    obj.Material = (Godot.Material)Material.Generate(Godot.GD.Load<Godot.Material>(((IResourceTag)Material).ResourcePath));
+                } else {
+                    obj.Material = (Godot.Material)Material.Generate();
+                }
+            }
 
             return obj;
         }

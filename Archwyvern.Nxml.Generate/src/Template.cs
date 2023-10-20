@@ -10,21 +10,27 @@ public class Template
     public string ClassName;
     public Type Type;
 
-    public struct AttributeType
+    public class Property
     {
         public Type Type;
         public string Name;
+        public Template Template;
+        public List<Type> SubTypes = new();
+        public List<Template> SubTypeTemplates = new();
     }
-    public struct OverloadedAttributeType
+    public struct OverloadedProperty
     {
         public string Type;
         public string Name;
     }
 
-    public Dictionary<string, AttributeType> SimpleAttributes = new();
-    public Dictionary<string, OverloadedAttributeType> OverloadedAttributes = new();
+    public Dictionary<string, Property> SimpleAttributes = new();
+    public Dictionary<string, OverloadedProperty> OverloadedAttributes = new();
     public HashSet<Type> AttributeOverrideTypes = new();
 
+    public Dictionary<string, Property> Elements = new();
+
+    public HashSet<Type> ResourceTypes = new(); 
     public Dictionary<string, Type> UnsupportedTypes = new(); 
 
 }

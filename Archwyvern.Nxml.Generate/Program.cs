@@ -9,14 +9,28 @@ namespace Archwyvern.Nxml.Generate;
 
 internal class Program
 {
-    private static string RootDir = Directory.GetParent(System.Environment.CurrentDirectory).FullName + "\\..\\..\\..\\Archwyvern.Nxml\\";
+    private static string RootDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "/../../../../Archwyvern.Nxml/";
 
     public static void Main(string[] args)
     {
         var builder = new TemplateBuilder("Archwyvern.Nxml.Tags");
 
         AddTranslators(builder);
-        LoadGodotAssembly(builder);
+        LoadTypes(
+            builder,
+            Assembly.GetAssembly(typeof(Godot.Node)),
+            typeof(Godot.Node),
+            typeof(Godot.Node)
+        );
+        /*
+        LoadTypes(
+            builder,
+            Assembly.GetAssembly(typeof(Godot.Node)),
+            typeof(Godot.Resource),
+            typeof(Godot.Resource)
+        );
+        */
+            
 
         var templates = builder.GetTemplates();
 
@@ -43,35 +57,28 @@ internal class Program
         }
     }
 
-    private static void LoadGodotAssembly(TemplateBuilder builder)
+    private static void LoadTypes(TemplateBuilder builder, Assembly assembly, Type parent, Type ancestor)
     {
-        var skip = new HashSet<Type>() {
-            typeof(Godot.BaseButton),
-            typeof(Godot.Range),
-            typeof(Godot.ScrollBar),
-            typeof(Godot.Slider),
-            typeof(Godot.Separator),
-        };
-
-        foreach (var type in Assembly.GetAssembly(typeof(Godot.Control)).GetTypes()) {
-            if (!type.IsSubclassOf(typeof(Godot.Control)) || !type.IsClass || type.IsGenericType || type.IsAbstract) {
+        foreach (var type in assembly.GetTypes()) {
+            if (!(type == parent || type.IsSubclassOf(parent))) {
                 continue;
             }
 
-            if (skip.Contains(type)) {
+            if (!type.IsClass || type.IsGenericType || type.IsAbstract) {
                 continue;
             }
 
-            builder.AddType(type, typeof(Godot.Node));
+            builder.AddType(type, ancestor);
         }
     }
     
     private static void GenerateSourceFiles(IEnumerable<Template> templates)
     {
-        string source = RootDir + "src\\Source\\";
-        DirectoryInfo tags = new DirectoryInfo(source + "\\Tags\\");
+        string source = RootDir + "src/Source/";
+
+        DirectoryInfo tags = new DirectoryInfo(source + "/Tags/");
         string manifest = source + "Manifest.cs";
-        string baseTag = source + "Tag.cs";
+        string supportTags = source + "SupportTags.cs";
         string overrides = source + "Overrides.cs";
 
         if (!tags.Exists) {
@@ -83,38 +90,46 @@ internal class Program
         }
 
         foreach (var template in templates) {
-            var path = tags.FullName + $"\\{template.ClassName}.cs";
-
-            Console.WriteLine("Writing to: " + path);
+            var path = tags.FullName + $"/{template.ClassName}.cs";
 
             WriteFile(new FileInfo(path), SourceBuilder.CreateTag(template));
         }
 
         WriteFile(new FileInfo(manifest), SourceBuilder.CreateManifest(templates));
-        WriteFile(new FileInfo(baseTag), SourceBuilder.CreateBaseTag(templates));
+        WriteFile(new FileInfo(supportTags), SourceBuilder.CreateSupportTags(templates));
         WriteFile(new FileInfo(overrides), SourceBuilder.CreateOverrides(templates));
     }
 
     private static void DumpUnsupportedTypes(IEnumerable<Template> templates)
     {
-        var sb = new StringBuilder();
+        var sb1 = new StringBuilder();
+        var sb2 = new StringBuilder();
         var types = new HashSet<Type>();
 
+        sb1.AppendLine("Unhandled types");
+        sb1.AppendLine("===================================");
         foreach (var template in templates) {
             foreach (var entry in template.UnsupportedTypes) {
                 if (!types.Contains(entry.Value)) {
-                    sb.AppendLine(entry.Value.FullName);
+                    sb1.AppendLine(entry.Value.FullName);
                     types.Add(entry.Value);
+                    sb2.AppendLine($"{entry.Value.FullName}: {template.ClassName}.{entry.Key}");
                 }
             }
         }
 
-        WriteFile(new FileInfo(RootDir + "todo.txt"), sb.ToString());
+        sb1.AppendLine("");
+        sb1.AppendLine("Examples");
+        sb1.AppendLine("===================================");
+
+        WriteFile(new FileInfo(RootDir + "todo.txt"), sb1.ToString() + sb2.ToString());
     }
 
     private static void WriteFile(FileInfo file, string content)
     {
         var writer = file.CreateText();
+
+        Console.WriteLine("Writing to: " + file.FullName);
         writer.Write(content);
         writer.Close();
     }

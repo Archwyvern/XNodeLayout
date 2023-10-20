@@ -2,308 +2,723 @@
 namespace Archwyvern.Nxml.Tags
 {
     [System.Xml.Serialization.XmlRoot(ElementName = "TextureButton", Namespace = "http://archwyvern.com/xsd/nxml")]
-    public class TextureButtonTag : Archwyvern.Nxml.Tag
+    public class TextureButtonTag : Archwyvern.Nxml.BaseNodeTag
     {
 #nullable enable
-        // Simple Fields
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "IgnoreTextureSize")] public string _Surrogate_IgnoreTextureSize {
+        public static class ElementProperty
+        {
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TextureNormal")] public class TextureNormal
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TexturePressed")] public class TexturePressed
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TextureHover")] public class TextureHover
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TextureDisabled")] public class TextureDisabled
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TextureFocused")] public class TextureFocused
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.TextureClickMask")] public class TextureClickMask
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "Bitmap", Type = typeof(BitmapTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.ButtonGroup")] public class ButtonGroup
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "ButtonGroup", Type = typeof(ButtonGroupTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.Shortcut")] public class Shortcut
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "Shortcut", Type = typeof(ShortcutTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.Theme")] public class Theme
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "Theme", Type = typeof(ThemeTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureButton.ElementProperty.Material")] public class Material
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasItemMaterial", Type = typeof(CanvasItemMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "FogMaterial", Type = typeof(FogMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Material", Type = typeof(MaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "OrmMaterial3D", Type = typeof(OrmMaterial3DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PanoramaSkyMaterial", Type = typeof(PanoramaSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ParticleProcessMaterial", Type = typeof(ParticleProcessMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PhysicalSkyMaterial", Type = typeof(PhysicalSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderMaterial", Type = typeof(PlaceholderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ProceduralSkyMaterial", Type = typeof(ProceduralSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ShaderMaterial", Type = typeof(ShaderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "StandardMaterial3D", Type = typeof(StandardMaterial3DTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+        }
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureNormal => _Surrogate_Element_TextureNormal?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureNormal")] public TextureButtonTag.ElementProperty.TextureNormal? _Surrogate_Element_TextureNormal;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TexturePressed => _Surrogate_Element_TexturePressed?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TexturePressed")] public TextureButtonTag.ElementProperty.TexturePressed? _Surrogate_Element_TexturePressed;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureHover => _Surrogate_Element_TextureHover?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureHover")] public TextureButtonTag.ElementProperty.TextureHover? _Surrogate_Element_TextureHover;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureDisabled => _Surrogate_Element_TextureDisabled?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureDisabled")] public TextureButtonTag.ElementProperty.TextureDisabled? _Surrogate_Element_TextureDisabled;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureFocused => _Surrogate_Element_TextureFocused?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureFocused")] public TextureButtonTag.ElementProperty.TextureFocused? _Surrogate_Element_TextureFocused;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureClickMask => _Surrogate_Element_TextureClickMask?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureClickMask")] public TextureButtonTag.ElementProperty.TextureClickMask? _Surrogate_Element_TextureClickMask;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? ButtonGroup => _Surrogate_Element_ButtonGroup?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ButtonGroup")] public TextureButtonTag.ElementProperty.ButtonGroup? _Surrogate_Element_ButtonGroup;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Shortcut => _Surrogate_Element_Shortcut?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Shortcut")] public TextureButtonTag.ElementProperty.Shortcut? _Surrogate_Element_Shortcut;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Theme => _Surrogate_Element_Theme?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Theme")] public TextureButtonTag.ElementProperty.Theme? _Surrogate_Element_Theme;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Material => _Surrogate_Element_Material?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Material")] public TextureButtonTag.ElementProperty.Material? _Surrogate_Element_Material;
+
+        // Simple Attributes
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "IgnoreTextureSize")] public string _Surrogate_Attribute_IgnoreTextureSize {
             get => IgnoreTextureSize != null ? ((System.Boolean)IgnoreTextureSize).ToString() : "";
-            set => IgnoreTextureSize = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { IgnoreTextureSize = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? IgnoreTextureSize;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMode")] public string _Surrogate_StretchMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.IgnoreTextureSize")] public string _Surrogate_Element_IgnoreTextureSize {
+            get => IgnoreTextureSize != null ? ((System.Boolean)IgnoreTextureSize).ToString() : "";
+            set { if (value != "") { IgnoreTextureSize = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? IgnoreTextureSize { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMode")] public string _Surrogate_Attribute_StretchMode {
             get => StretchMode != null ? ((Godot.TextureButton.StretchModeEnum)StretchMode).ToString() : "";
-            set => StretchMode = value != "" ? System.Enum.Parse<Godot.TextureButton.StretchModeEnum>(value) : null;
+            set { if (value != "") { StretchMode = System.Enum.Parse<Godot.TextureButton.StretchModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.TextureButton.StretchModeEnum? StretchMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FlipH")] public string _Surrogate_FlipH {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.StretchMode")] public string _Surrogate_Element_StretchMode {
+            get => StretchMode != null ? ((Godot.TextureButton.StretchModeEnum)StretchMode).ToString() : "";
+            set { if (value != "") { StretchMode = System.Enum.Parse<Godot.TextureButton.StretchModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.TextureButton.StretchModeEnum? StretchMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FlipH")] public string _Surrogate_Attribute_FlipH {
             get => FlipH != null ? ((System.Boolean)FlipH).ToString() : "";
-            set => FlipH = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { FlipH = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FlipH;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FlipV")] public string _Surrogate_FlipV {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.FlipH")] public string _Surrogate_Element_FlipH {
+            get => FlipH != null ? ((System.Boolean)FlipH).ToString() : "";
+            set { if (value != "") { FlipH = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FlipH { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FlipV")] public string _Surrogate_Attribute_FlipV {
             get => FlipV != null ? ((System.Boolean)FlipV).ToString() : "";
-            set => FlipV = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { FlipV = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FlipV;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Disabled")] public string _Surrogate_Disabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.FlipV")] public string _Surrogate_Element_FlipV {
+            get => FlipV != null ? ((System.Boolean)FlipV).ToString() : "";
+            set { if (value != "") { FlipV = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? FlipV { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Disabled")] public string _Surrogate_Attribute_Disabled {
             get => Disabled != null ? ((System.Boolean)Disabled).ToString() : "";
-            set => Disabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Disabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Disabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ToggleMode")] public string _Surrogate_ToggleMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Disabled")] public string _Surrogate_Element_Disabled {
+            get => Disabled != null ? ((System.Boolean)Disabled).ToString() : "";
+            set { if (value != "") { Disabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Disabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ToggleMode")] public string _Surrogate_Attribute_ToggleMode {
             get => ToggleMode != null ? ((System.Boolean)ToggleMode).ToString() : "";
-            set => ToggleMode = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ToggleMode = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ToggleMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ButtonPressed")] public string _Surrogate_ButtonPressed {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ToggleMode")] public string _Surrogate_Element_ToggleMode {
+            get => ToggleMode != null ? ((System.Boolean)ToggleMode).ToString() : "";
+            set { if (value != "") { ToggleMode = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ToggleMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ButtonPressed")] public string _Surrogate_Attribute_ButtonPressed {
             get => ButtonPressed != null ? ((System.Boolean)ButtonPressed).ToString() : "";
-            set => ButtonPressed = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ButtonPressed = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ButtonPressed;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ActionMode")] public string _Surrogate_ActionMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ButtonPressed")] public string _Surrogate_Element_ButtonPressed {
+            get => ButtonPressed != null ? ((System.Boolean)ButtonPressed).ToString() : "";
+            set { if (value != "") { ButtonPressed = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ButtonPressed { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ActionMode")] public string _Surrogate_Attribute_ActionMode {
             get => ActionMode != null ? ((Godot.BaseButton.ActionModeEnum)ActionMode).ToString() : "";
-            set => ActionMode = value != "" ? System.Enum.Parse<Godot.BaseButton.ActionModeEnum>(value) : null;
+            set { if (value != "") { ActionMode = System.Enum.Parse<Godot.BaseButton.ActionModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.BaseButton.ActionModeEnum? ActionMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ButtonMask")] public string _Surrogate_ButtonMask {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ActionMode")] public string _Surrogate_Element_ActionMode {
+            get => ActionMode != null ? ((Godot.BaseButton.ActionModeEnum)ActionMode).ToString() : "";
+            set { if (value != "") { ActionMode = System.Enum.Parse<Godot.BaseButton.ActionModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.BaseButton.ActionModeEnum? ActionMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ButtonMask")] public string _Surrogate_Attribute_ButtonMask {
             get => ButtonMask != null ? ((Godot.MouseButtonMask)ButtonMask).ToString() : "";
-            set => ButtonMask = value != "" ? System.Enum.Parse<Godot.MouseButtonMask>(value) : null;
+            set { if (value != "") { ButtonMask = System.Enum.Parse<Godot.MouseButtonMask>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.MouseButtonMask? ButtonMask;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "KeepPressedOutside")] public string _Surrogate_KeepPressedOutside {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ButtonMask")] public string _Surrogate_Element_ButtonMask {
+            get => ButtonMask != null ? ((Godot.MouseButtonMask)ButtonMask).ToString() : "";
+            set { if (value != "") { ButtonMask = System.Enum.Parse<Godot.MouseButtonMask>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.MouseButtonMask? ButtonMask { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "KeepPressedOutside")] public string _Surrogate_Attribute_KeepPressedOutside {
             get => KeepPressedOutside != null ? ((System.Boolean)KeepPressedOutside).ToString() : "";
-            set => KeepPressedOutside = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { KeepPressedOutside = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? KeepPressedOutside;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutFeedback")] public string _Surrogate_ShortcutFeedback {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.KeepPressedOutside")] public string _Surrogate_Element_KeepPressedOutside {
+            get => KeepPressedOutside != null ? ((System.Boolean)KeepPressedOutside).ToString() : "";
+            set { if (value != "") { KeepPressedOutside = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? KeepPressedOutside { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutFeedback")] public string _Surrogate_Attribute_ShortcutFeedback {
             get => ShortcutFeedback != null ? ((System.Boolean)ShortcutFeedback).ToString() : "";
-            set => ShortcutFeedback = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShortcutFeedback = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutFeedback;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutInTooltip")] public string _Surrogate_ShortcutInTooltip {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ShortcutFeedback")] public string _Surrogate_Element_ShortcutFeedback {
+            get => ShortcutFeedback != null ? ((System.Boolean)ShortcutFeedback).ToString() : "";
+            set { if (value != "") { ShortcutFeedback = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutFeedback { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShortcutInTooltip")] public string _Surrogate_Attribute_ShortcutInTooltip {
             get => ShortcutInTooltip != null ? ((System.Boolean)ShortcutInTooltip).ToString() : "";
-            set => ShortcutInTooltip = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShortcutInTooltip = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutInTooltip;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_ClipContents {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ShortcutInTooltip")] public string _Surrogate_Element_ShortcutInTooltip {
+            get => ShortcutInTooltip != null ? ((System.Boolean)ShortcutInTooltip).ToString() : "";
+            set { if (value != "") { ShortcutInTooltip = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShortcutInTooltip { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_Attribute_ClipContents {
             get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
-            set => ClipContents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_LayoutDirection {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ClipContents")] public string _Surrogate_Element_ClipContents {
+            get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_Attribute_LayoutDirection {
             get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
-            set => LayoutDirection = value != "" ? System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value) : null;
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_LayoutMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.LayoutDirection")] public string _Surrogate_Element_LayoutDirection {
+            get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_Attribute_LayoutMode {
             get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
-            set => LayoutMode = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_AnchorsPreset {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.LayoutMode")] public string _Surrogate_Element_LayoutMode {
+            get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_Attribute_AnchorsPreset {
             get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
-            set => AnchorsPreset = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_AnchorLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AnchorsPreset")] public string _Surrogate_Element_AnchorsPreset {
+            get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_Attribute_AnchorLeft {
             get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
-            set => AnchorLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_AnchorTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AnchorLeft")] public string _Surrogate_Element_AnchorLeft {
+            get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_Attribute_AnchorTop {
             get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
-            set => AnchorTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_AnchorRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AnchorTop")] public string _Surrogate_Element_AnchorTop {
+            get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_Attribute_AnchorRight {
             get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
-            set => AnchorRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_AnchorBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AnchorRight")] public string _Surrogate_Element_AnchorRight {
+            get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_Attribute_AnchorBottom {
             get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
-            set => AnchorBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_OffsetLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AnchorBottom")] public string _Surrogate_Element_AnchorBottom {
+            get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_Attribute_OffsetLeft {
             get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
-            set => OffsetLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_OffsetTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.OffsetLeft")] public string _Surrogate_Element_OffsetLeft {
+            get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_Attribute_OffsetTop {
             get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
-            set => OffsetTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_OffsetRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.OffsetTop")] public string _Surrogate_Element_OffsetTop {
+            get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_Attribute_OffsetRight {
             get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
-            set => OffsetRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_OffsetBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.OffsetRight")] public string _Surrogate_Element_OffsetRight {
+            get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_Attribute_OffsetBottom {
             get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
-            set => OffsetBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_GrowHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.OffsetBottom")] public string _Surrogate_Element_OffsetBottom {
+            get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_Attribute_GrowHorizontal {
             get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
-            set => GrowHorizontal = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_GrowVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.GrowHorizontal")] public string _Surrogate_Element_GrowHorizontal {
+            get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_Attribute_GrowVertical {
             get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
-            set => GrowVertical = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Rotation {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.GrowVertical")] public string _Surrogate_Element_GrowVertical {
+            get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Attribute_Rotation {
             get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
-            set => Rotation = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_RotationDegrees {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Rotation")] public string _Surrogate_Element_Rotation {
+            get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_Attribute_RotationDegrees {
             get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
-            set => RotationDegrees = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_SizeFlagsHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.RotationDegrees")] public string _Surrogate_Element_RotationDegrees {
+            get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_Attribute_SizeFlagsHorizontal {
             get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
-            set => SizeFlagsHorizontal = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_SizeFlagsVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.SizeFlagsHorizontal")] public string _Surrogate_Element_SizeFlagsHorizontal {
+            get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_Attribute_SizeFlagsVertical {
             get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
-            set => SizeFlagsVertical = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_SizeFlagsStretchRatio {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.SizeFlagsVertical")] public string _Surrogate_Element_SizeFlagsVertical {
+            get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_Attribute_SizeFlagsStretchRatio {
             get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
-            set => SizeFlagsStretchRatio = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_AutoTranslate {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.SizeFlagsStretchRatio")] public string _Surrogate_Element_SizeFlagsStretchRatio {
+            get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_Attribute_AutoTranslate {
             get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
-            set => AutoTranslate = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_LocalizeNumeralSystem {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.AutoTranslate")] public string _Surrogate_Element_AutoTranslate {
+            get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_Attribute_LocalizeNumeralSystem {
             get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
-            set => LocalizeNumeralSystem = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_TooltipText {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.LocalizeNumeralSystem")] public string _Surrogate_Element_LocalizeNumeralSystem {
+            get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_Attribute_TooltipText {
             get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
-            set => TooltipText = value != "" ? value : null;
+            set { if (value != "") { TooltipText = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_FocusMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TooltipText")] public string _Surrogate_Element_TooltipText {
+            get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
+            set { if (value != "") { TooltipText = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_Attribute_FocusMode {
             get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
-            set => FocusMode = value != "" ? System.Enum.Parse<Godot.Control.FocusModeEnum>(value) : null;
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_MouseFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.FocusMode")] public string _Surrogate_Element_FocusMode {
+            get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_Attribute_MouseFilter {
             get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
-            set => MouseFilter = value != "" ? System.Enum.Parse<Godot.Control.MouseFilterEnum>(value) : null;
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_MouseForcePassScrollEvents {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.MouseFilter")] public string _Surrogate_Element_MouseFilter {
+            get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_Attribute_MouseForcePassScrollEvents {
             get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
-            set => MouseForcePassScrollEvents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_MouseDefaultCursorShape {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.MouseForcePassScrollEvents")] public string _Surrogate_Element_MouseForcePassScrollEvents {
+            get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_Attribute_MouseDefaultCursorShape {
             get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
-            set => MouseDefaultCursorShape = value != "" ? System.Enum.Parse<Godot.Control.CursorShape>(value) : null;
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Visible {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.MouseDefaultCursorShape")] public string _Surrogate_Element_MouseDefaultCursorShape {
+            get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Attribute_Visible {
             get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
-            set => Visible = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_ShowBehindParent {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.Visible")] public string _Surrogate_Element_Visible {
+            get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_Attribute_ShowBehindParent {
             get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
-            set => ShowBehindParent = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_TopLevel {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ShowBehindParent")] public string _Surrogate_Element_ShowBehindParent {
+            get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_Attribute_TopLevel {
             get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
-            set => TopLevel = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_ClipChildren {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TopLevel")] public string _Surrogate_Element_TopLevel {
+            get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_Attribute_ClipChildren {
             get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
-            set => ClipChildren = value != "" ? System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value) : null;
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_LightMask {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ClipChildren")] public string _Surrogate_Element_ClipChildren {
+            get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_Attribute_LightMask {
             get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
-            set => LightMask = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_VisibilityLayer {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.LightMask")] public string _Surrogate_Element_LightMask {
+            get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_Attribute_VisibilityLayer {
             get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
-            set => VisibilityLayer = value != "" ? System.UInt32.Parse(value) : null;
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_ZIndex {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.VisibilityLayer")] public string _Surrogate_Element_VisibilityLayer {
+            get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_Attribute_ZIndex {
             get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
-            set => ZIndex = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_ZAsRelative {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ZIndex")] public string _Surrogate_Element_ZIndex {
+            get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_Attribute_ZAsRelative {
             get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
-            set => ZAsRelative = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_YSortEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ZAsRelative")] public string _Surrogate_Element_ZAsRelative {
+            get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_Attribute_YSortEnabled {
             get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
-            set => YSortEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_TextureFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.YSortEnabled")] public string _Surrogate_Element_YSortEnabled {
+            get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_Attribute_TextureFilter {
             get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
-            set => TextureFilter = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value) : null;
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_TextureRepeat {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureFilter")] public string _Surrogate_Element_TextureFilter {
+            get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_Attribute_TextureRepeat {
             get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
-            set => TextureRepeat = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value) : null;
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_UseParentMaterial {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.TextureRepeat")] public string _Surrogate_Element_TextureRepeat {
+            get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_Attribute_UseParentMaterial {
             get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
-            set => UseParentMaterial = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_UniqueNameInOwner {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.UseParentMaterial")] public string _Surrogate_Element_UseParentMaterial {
+            get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_Attribute_UniqueNameInOwner {
             get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
-            set => UniqueNameInOwner = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_SceneFilePath {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.UniqueNameInOwner")] public string _Surrogate_Element_UniqueNameInOwner {
+            get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_Attribute_SceneFilePath {
             get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
-            set => SceneFilePath = value != "" ? value : null;
+            set { if (value != "") { SceneFilePath = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_ProcessMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.SceneFilePath")] public string _Surrogate_Element_SceneFilePath {
+            get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
+            set { if (value != "") { SceneFilePath = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_Attribute_ProcessMode {
             get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
-            set => ProcessMode = value != "" ? System.Enum.Parse<Godot.Node.ProcessModeEnum>(value) : null;
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_ProcessPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessMode")] public string _Surrogate_Element_ProcessMode {
+            get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_Attribute_ProcessPriority {
             get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
-            set => ProcessPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_ProcessPhysicsPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessPriority")] public string _Surrogate_Element_ProcessPriority {
+            get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_Attribute_ProcessPhysicsPriority {
             get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
-            set => ProcessPhysicsPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_ProcessThreadGroup {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessPhysicsPriority")] public string _Surrogate_Element_ProcessPhysicsPriority {
+            get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_Attribute_ProcessThreadGroup {
             get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
-            set => ProcessThreadGroup = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value) : null;
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_ProcessThreadGroupOrder {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessThreadGroup")] public string _Surrogate_Element_ProcessThreadGroup {
+            get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_Attribute_ProcessThreadGroupOrder {
             get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
-            set => ProcessThreadGroupOrder = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_ProcessThreadMessages {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessThreadGroupOrder")] public string _Surrogate_Element_ProcessThreadGroupOrder {
+            get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_Attribute_ProcessThreadMessages {
             get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
-            set => ProcessThreadMessages = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value) : null;
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_EditorDescription {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.ProcessThreadMessages")] public string _Surrogate_Element_ProcessThreadMessages {
+            get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_Attribute_EditorDescription {
             get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
-            set => EditorDescription = value != "" ? value : null;
+            set { if (value != "") { EditorDescription = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureButton.EditorDescription")] public string _Surrogate_Element_EditorDescription {
+            get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
+            set { if (value != "") { EditorDescription = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription { get; set; }
 #nullable disable
 
-        // Overloaded Fields
+        // Overloaded Attributes
         [System.Xml.Serialization.XmlAttribute(AttributeName = "CustomMinimumSize")] public string _Surrogate_CustomMinimumSize {
             get => CustomMinimumSize != null ? ((Archwyvern.Nxml.Translators.Vector2)CustomMinimumSize).ToString() : "";
             set => CustomMinimumSize = value != "" ? value : null;
@@ -355,10 +770,12 @@ namespace Archwyvern.Nxml.Tags
         }
         [System.Xml.Serialization.XmlIgnore] public Archwyvern.Nxml.Translators.StringName? Name;
 
-        public override Godot.Node CreateNode()
+        internal override Godot.GodotObject CreateObject(Godot.GodotObject alt = null)
         {
-            var obj = new Godot.TextureButton();
+            if (alt != null && alt is not Godot.TextureButton) return alt;
+            var obj = (Godot.TextureButton)alt ?? new Godot.TextureButton();
 
+            // Attributes
             if (IgnoreTextureSize != null) obj.IgnoreTextureSize = (System.Boolean)IgnoreTextureSize;
             if (StretchMode != null) obj.StretchMode = (Godot.TextureButton.StretchModeEnum)StretchMode;
             if (FlipH != null) obj.FlipH = (System.Boolean)FlipH;
@@ -418,6 +835,7 @@ namespace Archwyvern.Nxml.Tags
             if (ProcessThreadGroupOrder != null) obj.ProcessThreadGroupOrder = (System.Int32)ProcessThreadGroupOrder;
             if (ProcessThreadMessages != null) obj.ProcessThreadMessages = (Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages;
             if (EditorDescription != null) obj.EditorDescription = (System.String)EditorDescription;
+            // Overloaded Attributes
             if (CustomMinimumSize != null) obj.CustomMinimumSize = (Archwyvern.Nxml.Translators.Vector2)CustomMinimumSize;
             if (Size != null) obj.Size = (Archwyvern.Nxml.Translators.Vector2)Size;
             if (Position != null) obj.Position = (Archwyvern.Nxml.Translators.Vector2)Position;
@@ -428,6 +846,77 @@ namespace Archwyvern.Nxml.Tags
             if (Modulate != null) obj.Modulate = (Archwyvern.Nxml.Translators.Color)Modulate;
             if (SelfModulate != null) obj.SelfModulate = (Archwyvern.Nxml.Translators.Color)SelfModulate;
             if (Name != null) obj.Name = (Archwyvern.Nxml.Translators.StringName)Name;
+            // Elements
+            if (TextureNormal != null) {
+                if (((IResourceTag)TextureNormal).ResourcePath != null) {
+                    obj.TextureNormal = (Godot.Texture2D)TextureNormal.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureNormal).ResourcePath));
+                } else {
+                    obj.TextureNormal = (Godot.Texture2D)TextureNormal.Generate();
+                }
+            }
+            if (TexturePressed != null) {
+                if (((IResourceTag)TexturePressed).ResourcePath != null) {
+                    obj.TexturePressed = (Godot.Texture2D)TexturePressed.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TexturePressed).ResourcePath));
+                } else {
+                    obj.TexturePressed = (Godot.Texture2D)TexturePressed.Generate();
+                }
+            }
+            if (TextureHover != null) {
+                if (((IResourceTag)TextureHover).ResourcePath != null) {
+                    obj.TextureHover = (Godot.Texture2D)TextureHover.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureHover).ResourcePath));
+                } else {
+                    obj.TextureHover = (Godot.Texture2D)TextureHover.Generate();
+                }
+            }
+            if (TextureDisabled != null) {
+                if (((IResourceTag)TextureDisabled).ResourcePath != null) {
+                    obj.TextureDisabled = (Godot.Texture2D)TextureDisabled.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureDisabled).ResourcePath));
+                } else {
+                    obj.TextureDisabled = (Godot.Texture2D)TextureDisabled.Generate();
+                }
+            }
+            if (TextureFocused != null) {
+                if (((IResourceTag)TextureFocused).ResourcePath != null) {
+                    obj.TextureFocused = (Godot.Texture2D)TextureFocused.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureFocused).ResourcePath));
+                } else {
+                    obj.TextureFocused = (Godot.Texture2D)TextureFocused.Generate();
+                }
+            }
+            if (TextureClickMask != null) {
+                if (((IResourceTag)TextureClickMask).ResourcePath != null) {
+                    obj.TextureClickMask = (Godot.Bitmap)TextureClickMask.Generate(Godot.GD.Load<Godot.Bitmap>(((IResourceTag)TextureClickMask).ResourcePath));
+                } else {
+                    obj.TextureClickMask = (Godot.Bitmap)TextureClickMask.Generate();
+                }
+            }
+            if (ButtonGroup != null) {
+                if (((IResourceTag)ButtonGroup).ResourcePath != null) {
+                    obj.ButtonGroup = (Godot.ButtonGroup)ButtonGroup.Generate(Godot.GD.Load<Godot.ButtonGroup>(((IResourceTag)ButtonGroup).ResourcePath));
+                } else {
+                    obj.ButtonGroup = (Godot.ButtonGroup)ButtonGroup.Generate();
+                }
+            }
+            if (Shortcut != null) {
+                if (((IResourceTag)Shortcut).ResourcePath != null) {
+                    obj.Shortcut = (Godot.Shortcut)Shortcut.Generate(Godot.GD.Load<Godot.Shortcut>(((IResourceTag)Shortcut).ResourcePath));
+                } else {
+                    obj.Shortcut = (Godot.Shortcut)Shortcut.Generate();
+                }
+            }
+            if (Theme != null) {
+                if (((IResourceTag)Theme).ResourcePath != null) {
+                    obj.Theme = (Godot.Theme)Theme.Generate(Godot.GD.Load<Godot.Theme>(((IResourceTag)Theme).ResourcePath));
+                } else {
+                    obj.Theme = (Godot.Theme)Theme.Generate();
+                }
+            }
+            if (Material != null) {
+                if (((IResourceTag)Material).ResourcePath != null) {
+                    obj.Material = (Godot.Material)Material.Generate(Godot.GD.Load<Godot.Material>(((IResourceTag)Material).ResourcePath));
+                } else {
+                    obj.Material = (Godot.Material)Material.Generate();
+                }
+            }
 
             return obj;
         }

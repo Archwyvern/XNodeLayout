@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Gdml Testing"
+config/name="XNodeLayout Testing"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,5 +22,5 @@ window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="Archwyvern.project"
+project/assembly_name="Archwyvern.Project"
 project/solution_directory="../"

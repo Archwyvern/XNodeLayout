@@ -1,29 +1,36 @@
 using Archwyvern.Nxml;
-using Archwyvern.Nxml.Tags;
 using Godot;
-using System;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace Archwyvern.Project;
 
 public partial class Main : Node2D
 {
-	// Called when the node enters the scene tree for the first time.
+    private SerializationManager.Initializer _initializer;
+
 	public override void _Ready()
 	{
-        var container = GetNode("PanelContainer/HFlowContainer");
+        // The serializer takes a while to build, but runs in the background.
+        // Once built, it doesn't need to do so again.
+        SerializationManager.Initialize(LoadUI);
+    }
 
-        // TODO: abstract this all away, possible make a new resource type
-        // GD.Load<Nxml>("res://data/Hud.Nxml");
+    private void LoadUI(double loadTime) // or just LoadUI()
+    {
+        GD.Print("Serializer assembly time: " + loadTime); // ~1.95
 
-        var file = FileAccess.Open("res://data/Hud.Nxml", FileAccess.ModeFlags.Read);
-        var tag = SerializerManager.Deserialize(file.GetAsText());
+        // Load your XML file and get the node layout from the serialization manager.
+        // This process may soon include a custom resource to load with GD.Load<XNodeLayout>();
 
-        var node = tag.Generate<PanelContainer>();
+        var file = Godot.FileAccess.Open("res://data/Hud.nxml", Godot.FileAccess.ModeFlags.Read);
+        var layout = SerializationManager.GetNodeLayout(file.GetAsText());
+
+        double generateTime = Time.GetUnixTimeFromSystem();
+
+        // The layout is a populated DTO containing all the raw data needed to create a node.
+        var node = layout.Generate();
+
+        GD.Print("Node generation time: " + (Time.GetUnixTimeFromSystem() - generateTime)); // ~0.008
 
         AddChild(node);
-
-        GD.Load<XNodeLayout>("res://data/Hud.nxml");
     }
 }

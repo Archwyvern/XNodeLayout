@@ -8,6 +8,24 @@ namespace Archwyvern.Nxml
             System.Xml.Serialization.XmlAttributeOverrides attributeOverrides = new();
 
             attributeOverrides.Add(
+                typeof(Godot.Node.ProcessModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Node.ProcessModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Node.ProcessThreadGroupEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Node.ProcessThreadGroupEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Node.ProcessThreadMessagesEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Node.ProcessThreadMessagesEnum" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.TextEdit.LineWrappingMode),
                 new () {
                     XmlType = new() { TypeName = "Godot.TextEdit.LineWrappingMode" }
@@ -92,21 +110,39 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
-                typeof(Godot.Node.ProcessModeEnum),
+                typeof(Godot.GeometryInstance3D.ShadowCastingSetting),
                 new () {
-                    XmlType = new() { TypeName = "Godot.Node.ProcessModeEnum" }
+                    XmlType = new() { TypeName = "Godot.GeometryInstance3D.ShadowCastingSetting" }
                 }
             );
             attributeOverrides.Add(
-                typeof(Godot.Node.ProcessThreadGroupEnum),
+                typeof(Godot.GeometryInstance3D.GIModeEnum),
                 new () {
-                    XmlType = new() { TypeName = "Godot.Node.ProcessThreadGroupEnum" }
+                    XmlType = new() { TypeName = "Godot.GeometryInstance3D.GIModeEnum" }
                 }
             );
             attributeOverrides.Add(
-                typeof(Godot.Node.ProcessThreadMessagesEnum),
+                typeof(Godot.GeometryInstance3D.LightmapScale),
                 new () {
-                    XmlType = new() { TypeName = "Godot.Node.ProcessThreadMessagesEnum" }
+                    XmlType = new() { TypeName = "Godot.GeometryInstance3D.LightmapScale" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GeometryInstance3D.VisibilityRangeFadeModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GeometryInstance3D.VisibilityRangeFadeModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Node3D.RotationEditModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Node3D.RotationEditModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.EulerOrder),
+                new () {
+                    XmlType = new() { TypeName = "Godot.EulerOrder" }
                 }
             );
             attributeOverrides.Add(
@@ -122,6 +158,162 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
+                typeof(Godot.Window.ModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Window.ModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Window.WindowInitialPosition),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Window.WindowInitialPosition" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Window.ContentScaleModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Window.ContentScaleModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Window.ContentScaleAspectEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Window.ContentScaleAspectEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.Msaa),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.Msaa" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.ScreenSpaceAAEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.ScreenSpaceAAEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.DebugDrawEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.DebugDrawEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.Scaling3DModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.Scaling3DModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.VrsModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.VrsModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.DefaultCanvasItemTextureFilter),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.DefaultCanvasItemTextureFilter" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.DefaultCanvasItemTextureRepeat),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.DefaultCanvasItemTextureRepeat" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.SdfOversizeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.SdfOversizeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.SdfScaleEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.SdfScaleEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CollisionObject2D.DisableModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CollisionObject2D.DisableModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CollisionObject3D.DisableModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CollisionObject3D.DisableModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Vector3.Axis),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Vector3.Axis" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.BillboardModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.BillboardModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.SpriteBase3D.AlphaCutMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.SpriteBase3D.AlphaCutMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.AlphaAntiAliasing),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.AlphaAntiAliasing" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.TextureFilterEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.TextureFilterEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationPlayer.AnimationProcessCallback),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationPlayer.AnimationProcessCallback" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationPlayer.AnimationMethodCallMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationPlayer.AnimationMethodCallMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationTree.AnimationProcessCallback),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationTree.AnimationProcessCallback" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Area2D.SpaceOverride),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Area2D.SpaceOverride" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Area3D.SpaceOverride),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Area3D.SpaceOverride" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.AspectRatioContainer.StretchModeEnum),
                 new () {
                     XmlType = new() { TypeName = "Godot.AspectRatioContainer.StretchModeEnum" }
@@ -131,6 +323,42 @@ namespace Archwyvern.Nxml
                 typeof(Godot.AspectRatioContainer.AlignmentMode),
                 new () {
                     XmlType = new() { TypeName = "Godot.AspectRatioContainer.AlignmentMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamPlayer.MixTargetEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamPlayer.MixTargetEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamPlayer3D.AttenuationModelEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamPlayer3D.AttenuationModelEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamPlayer3D.DopplerTrackingEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamPlayer3D.DopplerTrackingEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BackBufferCopy.CopyModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BackBufferCopy.CopyModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseButton.ActionModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseButton.ActionModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.MouseButtonMask),
+                new () {
+                    XmlType = new() { TypeName = "Godot.MouseButtonMask" }
                 }
             );
             attributeOverrides.Add(
@@ -158,15 +386,111 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
-                typeof(Godot.BaseButton.ActionModeEnum),
+                typeof(Godot.CpuParticles2D.DrawOrderEnum),
                 new () {
-                    XmlType = new() { TypeName = "Godot.BaseButton.ActionModeEnum" }
+                    XmlType = new() { TypeName = "Godot.CpuParticles2D.DrawOrderEnum" }
                 }
             );
             attributeOverrides.Add(
-                typeof(Godot.MouseButtonMask),
+                typeof(Godot.CpuParticles2D.EmissionShapeEnum),
                 new () {
-                    XmlType = new() { TypeName = "Godot.MouseButtonMask" }
+                    XmlType = new() { TypeName = "Godot.CpuParticles2D.EmissionShapeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CpuParticles3D.DrawOrderEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CpuParticles3D.DrawOrderEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CpuParticles3D.EmissionShapeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CpuParticles3D.EmissionShapeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CsgShape3D.OperationEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CsgShape3D.OperationEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CsgPolygon3D.ModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CsgPolygon3D.ModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CsgPolygon3D.PathIntervalTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CsgPolygon3D.PathIntervalTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CsgPolygon3D.PathRotationEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CsgPolygon3D.PathRotationEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Camera2D.AnchorModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Camera2D.AnchorModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Camera2D.Camera2DProcessCallback),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Camera2D.Camera2DProcessCallback" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Camera3D.KeepAspectEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Camera3D.KeepAspectEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Camera3D.DopplerTrackingEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Camera3D.DopplerTrackingEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Camera3D.ProjectionType),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Camera3D.ProjectionType" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CharacterBody2D.MotionModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CharacterBody2D.MotionModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CharacterBody2D.PlatformOnLeaveEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CharacterBody2D.PlatformOnLeaveEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CharacterBody3D.MotionModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CharacterBody3D.MotionModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CharacterBody3D.PlatformOnLeaveEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CharacterBody3D.PlatformOnLeaveEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CollisionPolygon2D.BuildModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CollisionPolygon2D.BuildModeEnum" }
                 }
             );
             attributeOverrides.Add(
@@ -182,9 +506,93 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
+                typeof(Godot.Light2D.BlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Light2D.BlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Light2D.ShadowFilterEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Light2D.ShadowFilterEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.DirectionalLight3D.ShadowMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.DirectionalLight3D.ShadowMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.DirectionalLight3D.SkyModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.DirectionalLight3D.SkyModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Light3D.BakeMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Light3D.BakeMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FileDialog.FileModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FileDialog.FileModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FileDialog.AccessEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FileDialog.AccessEnum" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.FlowContainer.AlignmentMode),
                 new () {
                     XmlType = new() { TypeName = "Godot.FlowContainer.AlignmentMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RenderingServer.FogVolumeShape),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RenderingServer.FogVolumeShape" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticles2D.DrawOrderEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticles2D.DrawOrderEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticles3D.DrawOrderEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticles3D.DrawOrderEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticles3D.TransformAlignEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticles3D.TransformAlignEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticlesCollisionHeightField3D.ResolutionEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticlesCollisionHeightField3D.ResolutionEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticlesCollisionHeightField3D.UpdateModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticlesCollisionHeightField3D.UpdateModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GpuParticlesCollisionSdf3D.ResolutionEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GpuParticlesCollisionSdf3D.ResolutionEnum" }
                 }
             );
             attributeOverrides.Add(
@@ -224,6 +632,54 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
+                typeof(Godot.Label3D.AlphaCutMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Label3D.AlphaCutMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TextServer.Direction),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TextServer.Direction" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.LightmapGI.BakeQuality),
+                new () {
+                    XmlType = new() { TypeName = "Godot.LightmapGI.BakeQuality" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.LightmapGI.EnvironmentModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.LightmapGI.EnvironmentModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.LightmapGI.GenerateProbes),
+                new () {
+                    XmlType = new() { TypeName = "Godot.LightmapGI.GenerateProbes" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Line2D.LineTextureMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Line2D.LineTextureMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Line2D.LineJointMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Line2D.LineJointMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Line2D.LineCapMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Line2D.LineCapMode" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.LineEdit.VirtualKeyboardTypeEnum),
                 new () {
                     XmlType = new() { TypeName = "Godot.LineEdit.VirtualKeyboardTypeEnum" }
@@ -236,15 +692,165 @@ namespace Archwyvern.Nxml
                 }
             );
             attributeOverrides.Add(
+                typeof(Godot.MultiplayerSynchronizer.VisibilityUpdateModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.MultiplayerSynchronizer.VisibilityUpdateModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters2D.PathfindingAlgorithmEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters2D.PathfindingAlgorithmEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters2D.PathPostProcessing),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters2D.PathPostProcessing" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters2D.PathMetadataFlags),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters2D.PathMetadataFlags" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters3D.PathfindingAlgorithmEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters3D.PathfindingAlgorithmEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters3D.PathPostProcessing),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters3D.PathPostProcessing" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationPathQueryParameters3D.PathMetadataFlags),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationPathQueryParameters3D.PathMetadataFlags" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.NinePatchRect.AxisStretchMode),
                 new () {
                     XmlType = new() { TypeName = "Godot.NinePatchRect.AxisStretchMode" }
                 }
             );
             attributeOverrides.Add(
+                typeof(Godot.OmniLight3D.ShadowMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.OmniLight3D.ShadowMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.OpenXRHand.Hands),
+                new () {
+                    XmlType = new() { TypeName = "Godot.OpenXRHand.Hands" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.OpenXRHand.MotionRangeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.OpenXRHand.MotionRangeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.PathFollow3D.RotationModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.PathFollow3D.RotationModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody2D.CenterOfMassModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody2D.CenterOfMassModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody2D.CcdMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody2D.CcdMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody2D.FreezeModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody2D.FreezeModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody2D.DampMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody2D.DampMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.PhysicalBone3D.JointTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.PhysicalBone3D.JointTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.PhysicalBone3D.DampMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.PhysicalBone3D.DampMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.ReflectionProbe.UpdateModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.ReflectionProbe.UpdateModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.ReflectionProbe.AmbientModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.ReflectionProbe.AmbientModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody3D.CenterOfMassModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody3D.CenterOfMassModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody3D.FreezeModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody3D.FreezeModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RigidBody3D.DampMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RigidBody3D.DampMode" }
+                }
+            );
+            attributeOverrides.Add(
                 typeof(Godot.ScrollContainer.ScrollMode),
                 new () {
                     XmlType = new() { TypeName = "Godot.ScrollContainer.ScrollMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.SoftBody3D.DisableModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.SoftBody3D.DisableModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.SubViewport.ClearMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.SubViewport.ClearMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.SubViewport.UpdateMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.SubViewport.UpdateMode" }
                 }
             );
             attributeOverrides.Add(
@@ -275,6 +881,396 @@ namespace Archwyvern.Nxml
                 typeof(Godot.TextureRect.StretchModeEnum),
                 new () {
                     XmlType = new() { TypeName = "Godot.TextureRect.StretchModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TileMap.VisibilityMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TileMap.VisibilityMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Timer.TimerProcessCallback),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Timer.TimerProcessCallback" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TouchScreenButton.VisibilityModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TouchScreenButton.VisibilityModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.VisibleOnScreenEnabler2D.EnableModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.VisibleOnScreenEnabler2D.EnableModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.VisibleOnScreenEnabler3D.EnableModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.VisibleOnScreenEnabler3D.EnableModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.VoxelGI.SubdivEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.VoxelGI.SubdivEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CanvasItemMaterial.BlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CanvasItemMaterial.BlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CanvasItemMaterial.LightModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CanvasItemMaterial.LightModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.TransparencyEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.TransparencyEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.BlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.BlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.CullModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.CullModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.DepthDrawModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.DepthDrawModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.ShadingModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.ShadingModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.DiffuseModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.DiffuseModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.SpecularModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.SpecularModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.TextureChannel),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.TextureChannel" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.EmissionOperatorEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.EmissionOperatorEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.DetailUV),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.DetailUV" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.BaseMaterial3D.DistanceFadeModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.BaseMaterial3D.DistanceFadeModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.ParticleProcessMaterial.EmissionShapeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.ParticleProcessMaterial.EmissionShapeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.ParticleProcessMaterial.SubEmitterModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.ParticleProcessMaterial.SubEmitterModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.ParticleProcessMaterial.CollisionModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.ParticleProcessMaterial.CollisionModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Mesh.BlendShapeMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Mesh.BlendShapeMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.PlaneMesh.OrientationEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.PlaneMesh.OrientationEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.RibbonTrailMesh.ShapeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.RibbonTrailMesh.ShapeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CameraServer.FeedImage),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CameraServer.FeedImage" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.CurveTexture.TextureModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.CurveTexture.TextureModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GradientTexture2D.FillEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GradientTexture2D.FillEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.GradientTexture2D.RepeatEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.GradientTexture2D.RepeatEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationNodeAnimation.PlayModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationNodeAnimation.PlayModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationNodeBlendSpace1D.BlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationNodeBlendSpace1D.BlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationNodeBlendSpace2D.BlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationNodeBlendSpace2D.BlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationNodeOneShot.MixModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationNodeOneShot.MixModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AnimationNodeStateMachine.StateMachineTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AnimationNodeStateMachine.StateMachineTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamRandomizer.PlaybackModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamRandomizer.PlaybackModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamWav.FormatEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamWav.FormatEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.AudioStreamWav.LoopModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.AudioStreamWav.LoopModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Gradient.InterpolationModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Gradient.InterpolationModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Gradient.ColorSpace),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Gradient.ColorSpace" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.BGMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.BGMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.AmbientSource),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.AmbientSource" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.ReflectionSource),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.ReflectionSource" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.ToneMapper),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.ToneMapper" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.SdfgiyScale),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.SdfgiyScale" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Environment.GlowBlendModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Environment.GlowBlendModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TextServer.FontAntialiasing),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TextServer.FontAntialiasing" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TextServer.FontStyle),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TextServer.FontStyle" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TextServer.SubpixelPositioning),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TextServer.SubpixelPositioning" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TextServer.Hinting),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TextServer.Hinting" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.OccluderPolygon2D.CullModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.OccluderPolygon2D.CullModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Sky.ProcessModeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Sky.ProcessModeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.Sky.RadianceSizeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.Sky.RadianceSizeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.MultiMesh.TransformFormatEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.MultiMesh.TransformFormatEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationMesh.SamplePartitionTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationMesh.SamplePartitionTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationMesh.ParsedGeometryType),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationMesh.ParsedGeometryType" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.NavigationMesh.SourceGeometryMode),
+                new () {
+                    XmlType = new() { TypeName = "Godot.NavigationMesh.SourceGeometryMode" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TileSet.TileShapeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TileSet.TileShapeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TileSet.TileLayoutEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TileSet.TileLayoutEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.TileSet.TileOffsetAxisEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.TileSet.TileOffsetAxisEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.NoiseTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.NoiseTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.FractalTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.FractalTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.CellularDistanceFunctionEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.CellularDistanceFunctionEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.CellularReturnTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.CellularReturnTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.DomainWarpTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.DomainWarpTypeEnum" }
+                }
+            );
+            attributeOverrides.Add(
+                typeof(Godot.FastNoiseLite.DomainWarpFractalTypeEnum),
+                new () {
+                    XmlType = new() { TypeName = "Godot.FastNoiseLite.DomainWarpFractalTypeEnum" }
                 }
             );
 

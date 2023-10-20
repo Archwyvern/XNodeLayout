@@ -1,0 +1,12 @@
+<NodeLayout xmlns="http://archwyvern.com/xsd/nxml">
+    <PanelContainer Position="200,200" Size="400,400">
+        <CenterContainer>
+            <Button Alignment="Center" IconAlignment="Center" VerticalIconAlignment="Top">
+                <Button.Text>Hello World!</Button.Text>
+                <Button.Icon>
+                    <CompressedTexture2D ResourcePath="res://icon.svg" />
+                </Button.Icon>
+            </Button>
+        </CenterContainer>
+    </PanelContainer>
+</NodeLayout>

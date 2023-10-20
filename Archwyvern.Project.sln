@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archwyvern.Project", "Archwyvern.Project\Archwyvern.Project.csproj", "{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archwyvern.Nxml", "Archwyvern.Nxml\Archwyvern.Nxml.csproj", "{C81E4491-5346-4CFC-BAFE-873CA6186312}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archwyvern.Nxml.Generate", "Archwyvern.Nxml.Generate\Archwyvern.Nxml.Generate.csproj", "{446D1005-B300-42C1-8DC0-C4C4DB3967A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{132E7030-F259-4F2C-AA5D-ED75931491C7}"
+	ProjectSection(SolutionItems) = preProject
+		docs\assets\example.png = docs\assets\example.png
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{AEF127C5-5965-44A2-BF23-DD2DBB6D8B11}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81E4491-5346-4CFC-BAFE-873CA6186312}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{446D1005-B300-42C1-8DC0-C4C4DB3967A4}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,17 +1,59 @@
+Unhandled types
+===================================
+Godot.NodePath
+Godot.Node
 Godot.Collections.Array`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 Godot.Collections.Array`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 Godot.Collections.Dictionary
-Godot.SyntaxHighlighter
 Godot.Collections.Array
-Godot.NodePath
-Godot.Node
-Godot.Theme
-Godot.Material
-Godot.Texture2D
-Godot.ButtonGroup
-Godot.Shortcut
-Godot.LabelSettings
-System.Single[]
+Godot.Aabb
+Godot.Transform3D
+Godot.Quaternion
+Godot.Basis
+Godot.Vector2[]
+Godot.Transform2D
 Godot.Rect2
-Godot.Bitmap
-Godot.VideoStream
+Godot.Color[]
+Godot.Vector3[]
+System.String[]
+System.Single[]
+Godot.Callable
+System.Byte[]
+System.Int32[]
+Godot.Plane
+Godot.Collections.Array`1[[Godot.Font, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]
+Godot.Collections.Array`1[[System.Int32[], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+Godot.Collections.Array`1[[Godot.Vector2[], GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]
+Godot.Collections.Array`1[[Godot.Collections.Array, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]
+System.Int64[]
+Godot.Collections.Array`1[[Godot.Image, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]
+
+Examples
+===================================
+Godot.NodePath: NodeTag._ImportPath
+Godot.Node: NodeTag.Owner
+Godot.Collections.Array`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]: CodeEditTag.LineLengthGuidelines
+Godot.Collections.Array`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]: CodeEditTag.DelimiterStrings
+Godot.Collections.Dictionary: CodeEditTag.AutoBraceCompletionPairs
+Godot.Collections.Array: CodeEditTag.StructuredTextBidiOverrideOptions
+Godot.Aabb: MeshInstance3DTag.CustomAabb
+Godot.Transform3D: MeshInstance3DTag.Transform
+Godot.Quaternion: MeshInstance3DTag.Quaternion
+Godot.Basis: MeshInstance3DTag.Basis
+Godot.Vector2[]: AcceptDialogTag.MousePassthroughPolygon
+Godot.Transform2D: AcceptDialogTag.CanvasTransform
+Godot.Rect2: BackBufferCopyTag.Rect
+Godot.Color[]: CpuParticles2DTag.EmissionColors
+Godot.Vector3[]: CpuParticles3DTag.EmissionPoints
+System.String[]: FileDialogTag.Filters
+System.Single[]: LabelTag.TabStops
+Godot.Callable: MultiplayerSpawnerTag.SpawnFunction
+System.Byte[]: PortableCompressedTexture2DTag._Data
+System.Int32[]: AnimationNodeBlendSpace2DTag.Triangles
+Godot.Plane: WorldBoundaryShape3DTag.Plane
+Godot.Collections.Array`1[[Godot.Font, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]: FontFileTag.Fallbacks
+Godot.Collections.Array`1[[System.Int32[], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]: NavigationPolygonTag.Polygons
+Godot.Collections.Array`1[[Godot.Vector2[], GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]: NavigationPolygonTag.Outlines
+Godot.Collections.Array`1[[Godot.Collections.Array, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]: OggPacketSequenceTag.PacketData
+System.Int64[]: OggPacketSequenceTag.GranulePositions
+Godot.Collections.Array`1[[Godot.Image, GodotSharp, Version=4.1.1.0, Culture=neutral, PublicKeyToken=null]]: CubemapTag._Images

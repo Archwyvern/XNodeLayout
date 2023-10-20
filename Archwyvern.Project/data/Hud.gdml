@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PanelContainer xmlns="http://archwyvern.com/xsd/Nxml"
-				Position="50,50"
-				Size="1000,500">
-	<HFlowContainer>
-		<Button Text="Hello, World!" />
-		<Button Text="Goodbye World!" />
-	</HFlowContainer>
-</PanelContainer>

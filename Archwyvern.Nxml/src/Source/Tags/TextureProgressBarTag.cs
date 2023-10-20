@@ -2,338 +2,702 @@
 namespace Archwyvern.Nxml.Tags
 {
     [System.Xml.Serialization.XmlRoot(ElementName = "TextureProgressBar", Namespace = "http://archwyvern.com/xsd/nxml")]
-    public class TextureProgressBarTag : Archwyvern.Nxml.Tag
+    public class TextureProgressBarTag : Archwyvern.Nxml.BaseNodeTag
     {
 #nullable enable
-        // Simple Fields
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FillMode")] public string _Surrogate_FillMode {
+        public static class ElementProperty
+        {
+            [System.Xml.Serialization.XmlType(TypeName = "TextureProgressBar.ElementProperty.TextureUnder")] public class TextureUnder
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureProgressBar.ElementProperty.TextureOver")] public class TextureOver
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureProgressBar.ElementProperty.TextureProgress")] public class TextureProgress
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "AnimatedTexture", Type = typeof(AnimatedTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "AtlasTexture", Type = typeof(AtlasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CameraTexture", Type = typeof(CameraTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasTexture", Type = typeof(CanvasTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CompressedTexture2D", Type = typeof(CompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveTexture", Type = typeof(CurveTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "CurveXyzTexture", Type = typeof(CurveXyzTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture1D", Type = typeof(GradientTexture1DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "GradientTexture2D", Type = typeof(GradientTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ImageTexture", Type = typeof(ImageTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "MeshTexture", Type = typeof(MeshTextureTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "NoiseTexture2D", Type = typeof(NoiseTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderTexture2D", Type = typeof(PlaceholderTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PortableCompressedTexture2D", Type = typeof(PortableCompressedTexture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Texture2D", Type = typeof(Texture2DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ViewportTexture", Type = typeof(ViewportTextureTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureProgressBar.ElementProperty.Theme")] public class Theme
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "Theme", Type = typeof(ThemeTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+            [System.Xml.Serialization.XmlType(TypeName = "TextureProgressBar.ElementProperty.Material")] public class Material
+            {
+                [System.Xml.Serialization.XmlElement(ElementName = "CanvasItemMaterial", Type = typeof(CanvasItemMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "FogMaterial", Type = typeof(FogMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "Material", Type = typeof(MaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "OrmMaterial3D", Type = typeof(OrmMaterial3DTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PanoramaSkyMaterial", Type = typeof(PanoramaSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ParticleProcessMaterial", Type = typeof(ParticleProcessMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PhysicalSkyMaterial", Type = typeof(PhysicalSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "PlaceholderMaterial", Type = typeof(PlaceholderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ProceduralSkyMaterial", Type = typeof(ProceduralSkyMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "ShaderMaterial", Type = typeof(ShaderMaterialTag))]
+                [System.Xml.Serialization.XmlElement(ElementName = "StandardMaterial3D", Type = typeof(StandardMaterial3DTag))]
+                public Archwyvern.Nxml.BaseTag? Value;
+            }
+
+        }
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureUnder => _Surrogate_Element_TextureUnder?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TextureUnder")] public TextureProgressBarTag.ElementProperty.TextureUnder? _Surrogate_Element_TextureUnder;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureOver => _Surrogate_Element_TextureOver?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TextureOver")] public TextureProgressBarTag.ElementProperty.TextureOver? _Surrogate_Element_TextureOver;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? TextureProgress => _Surrogate_Element_TextureProgress?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TextureProgress")] public TextureProgressBarTag.ElementProperty.TextureProgress? _Surrogate_Element_TextureProgress;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Theme => _Surrogate_Element_Theme?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Theme")] public TextureProgressBarTag.ElementProperty.Theme? _Surrogate_Element_Theme;
+
+        [System.Xml.Serialization.XmlIgnore] public BaseTag? Material => _Surrogate_Element_Material?.Value;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Material")] public TextureProgressBarTag.ElementProperty.Material? _Surrogate_Element_Material;
+
+        // Simple Attributes
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FillMode")] public string _Surrogate_Attribute_FillMode {
             get => FillMode != null ? ((System.Int32)FillMode).ToString() : "";
-            set => FillMode = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { FillMode = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? FillMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "NinePatchStretch")] public string _Surrogate_NinePatchStretch {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.FillMode")] public string _Surrogate_Element_FillMode {
+            get => FillMode != null ? ((System.Int32)FillMode).ToString() : "";
+            set { if (value != "") { FillMode = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? FillMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "NinePatchStretch")] public string _Surrogate_Attribute_NinePatchStretch {
             get => NinePatchStretch != null ? ((System.Boolean)NinePatchStretch).ToString() : "";
-            set => NinePatchStretch = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { NinePatchStretch = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? NinePatchStretch;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginLeft")] public string _Surrogate_StretchMarginLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.NinePatchStretch")] public string _Surrogate_Element_NinePatchStretch {
+            get => NinePatchStretch != null ? ((System.Boolean)NinePatchStretch).ToString() : "";
+            set { if (value != "") { NinePatchStretch = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? NinePatchStretch { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginLeft")] public string _Surrogate_Attribute_StretchMarginLeft {
             get => StretchMarginLeft != null ? ((System.Int32)StretchMarginLeft).ToString() : "";
-            set => StretchMarginLeft = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { StretchMarginLeft = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginTop")] public string _Surrogate_StretchMarginTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.StretchMarginLeft")] public string _Surrogate_Element_StretchMarginLeft {
+            get => StretchMarginLeft != null ? ((System.Int32)StretchMarginLeft).ToString() : "";
+            set { if (value != "") { StretchMarginLeft = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginTop")] public string _Surrogate_Attribute_StretchMarginTop {
             get => StretchMarginTop != null ? ((System.Int32)StretchMarginTop).ToString() : "";
-            set => StretchMarginTop = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { StretchMarginTop = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginRight")] public string _Surrogate_StretchMarginRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.StretchMarginTop")] public string _Surrogate_Element_StretchMarginTop {
+            get => StretchMarginTop != null ? ((System.Int32)StretchMarginTop).ToString() : "";
+            set { if (value != "") { StretchMarginTop = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginRight")] public string _Surrogate_Attribute_StretchMarginRight {
             get => StretchMarginRight != null ? ((System.Int32)StretchMarginRight).ToString() : "";
-            set => StretchMarginRight = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { StretchMarginRight = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginBottom")] public string _Surrogate_StretchMarginBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.StretchMarginRight")] public string _Surrogate_Element_StretchMarginRight {
+            get => StretchMarginRight != null ? ((System.Int32)StretchMarginRight).ToString() : "";
+            set { if (value != "") { StretchMarginRight = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "StretchMarginBottom")] public string _Surrogate_Attribute_StretchMarginBottom {
             get => StretchMarginBottom != null ? ((System.Int32)StretchMarginBottom).ToString() : "";
-            set => StretchMarginBottom = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { StretchMarginBottom = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "RadialInitialAngle")] public string _Surrogate_RadialInitialAngle {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.StretchMarginBottom")] public string _Surrogate_Element_StretchMarginBottom {
+            get => StretchMarginBottom != null ? ((System.Int32)StretchMarginBottom).ToString() : "";
+            set { if (value != "") { StretchMarginBottom = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? StretchMarginBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "RadialInitialAngle")] public string _Surrogate_Attribute_RadialInitialAngle {
             get => RadialInitialAngle != null ? ((System.Single)RadialInitialAngle).ToString() : "";
-            set => RadialInitialAngle = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { RadialInitialAngle = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? RadialInitialAngle;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "RadialFillDegrees")] public string _Surrogate_RadialFillDegrees {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.RadialInitialAngle")] public string _Surrogate_Element_RadialInitialAngle {
+            get => RadialInitialAngle != null ? ((System.Single)RadialInitialAngle).ToString() : "";
+            set { if (value != "") { RadialInitialAngle = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? RadialInitialAngle { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "RadialFillDegrees")] public string _Surrogate_Attribute_RadialFillDegrees {
             get => RadialFillDegrees != null ? ((System.Single)RadialFillDegrees).ToString() : "";
-            set => RadialFillDegrees = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { RadialFillDegrees = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? RadialFillDegrees;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MinValue")] public string _Surrogate_MinValue {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.RadialFillDegrees")] public string _Surrogate_Element_RadialFillDegrees {
+            get => RadialFillDegrees != null ? ((System.Single)RadialFillDegrees).ToString() : "";
+            set { if (value != "") { RadialFillDegrees = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? RadialFillDegrees { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MinValue")] public string _Surrogate_Attribute_MinValue {
             get => MinValue != null ? ((System.Double)MinValue).ToString() : "";
-            set => MinValue = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { MinValue = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? MinValue;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MaxValue")] public string _Surrogate_MaxValue {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.MinValue")] public string _Surrogate_Element_MinValue {
+            get => MinValue != null ? ((System.Double)MinValue).ToString() : "";
+            set { if (value != "") { MinValue = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? MinValue { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MaxValue")] public string _Surrogate_Attribute_MaxValue {
             get => MaxValue != null ? ((System.Double)MaxValue).ToString() : "";
-            set => MaxValue = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { MaxValue = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? MaxValue;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Step")] public string _Surrogate_Step {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.MaxValue")] public string _Surrogate_Element_MaxValue {
+            get => MaxValue != null ? ((System.Double)MaxValue).ToString() : "";
+            set { if (value != "") { MaxValue = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? MaxValue { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Step")] public string _Surrogate_Attribute_Step {
             get => Step != null ? ((System.Double)Step).ToString() : "";
-            set => Step = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { Step = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? Step;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Page")] public string _Surrogate_Page {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Step")] public string _Surrogate_Element_Step {
+            get => Step != null ? ((System.Double)Step).ToString() : "";
+            set { if (value != "") { Step = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? Step { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Page")] public string _Surrogate_Attribute_Page {
             get => Page != null ? ((System.Double)Page).ToString() : "";
-            set => Page = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { Page = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? Page;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Value")] public string _Surrogate_Value {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Page")] public string _Surrogate_Element_Page {
+            get => Page != null ? ((System.Double)Page).ToString() : "";
+            set { if (value != "") { Page = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? Page { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Value")] public string _Surrogate_Attribute_Value {
             get => Value != null ? ((System.Double)Value).ToString() : "";
-            set => Value = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { Value = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? Value;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Ratio")] public string _Surrogate_Ratio {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Value")] public string _Surrogate_Element_Value {
+            get => Value != null ? ((System.Double)Value).ToString() : "";
+            set { if (value != "") { Value = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? Value { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Ratio")] public string _Surrogate_Attribute_Ratio {
             get => Ratio != null ? ((System.Double)Ratio).ToString() : "";
-            set => Ratio = value != "" ? System.Double.Parse(value) : null;
+            set { if (value != "") { Ratio = System.Double.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Double? Ratio;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ExpEdit")] public string _Surrogate_ExpEdit {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Ratio")] public string _Surrogate_Element_Ratio {
+            get => Ratio != null ? ((System.Double)Ratio).ToString() : "";
+            set { if (value != "") { Ratio = System.Double.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Double? Ratio { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ExpEdit")] public string _Surrogate_Attribute_ExpEdit {
             get => ExpEdit != null ? ((System.Boolean)ExpEdit).ToString() : "";
-            set => ExpEdit = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ExpEdit = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ExpEdit;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rounded")] public string _Surrogate_Rounded {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ExpEdit")] public string _Surrogate_Element_ExpEdit {
+            get => ExpEdit != null ? ((System.Boolean)ExpEdit).ToString() : "";
+            set { if (value != "") { ExpEdit = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ExpEdit { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rounded")] public string _Surrogate_Attribute_Rounded {
             get => Rounded != null ? ((System.Boolean)Rounded).ToString() : "";
-            set => Rounded = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Rounded = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Rounded;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AllowGreater")] public string _Surrogate_AllowGreater {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Rounded")] public string _Surrogate_Element_Rounded {
+            get => Rounded != null ? ((System.Boolean)Rounded).ToString() : "";
+            set { if (value != "") { Rounded = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Rounded { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AllowGreater")] public string _Surrogate_Attribute_AllowGreater {
             get => AllowGreater != null ? ((System.Boolean)AllowGreater).ToString() : "";
-            set => AllowGreater = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { AllowGreater = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AllowGreater;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AllowLesser")] public string _Surrogate_AllowLesser {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AllowGreater")] public string _Surrogate_Element_AllowGreater {
+            get => AllowGreater != null ? ((System.Boolean)AllowGreater).ToString() : "";
+            set { if (value != "") { AllowGreater = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AllowGreater { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AllowLesser")] public string _Surrogate_Attribute_AllowLesser {
             get => AllowLesser != null ? ((System.Boolean)AllowLesser).ToString() : "";
-            set => AllowLesser = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { AllowLesser = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AllowLesser;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_ClipContents {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AllowLesser")] public string _Surrogate_Element_AllowLesser {
+            get => AllowLesser != null ? ((System.Boolean)AllowLesser).ToString() : "";
+            set { if (value != "") { AllowLesser = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AllowLesser { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipContents")] public string _Surrogate_Attribute_ClipContents {
             get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
-            set => ClipContents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_LayoutDirection {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ClipContents")] public string _Surrogate_Element_ClipContents {
+            get => ClipContents != null ? ((System.Boolean)ClipContents).ToString() : "";
+            set { if (value != "") { ClipContents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ClipContents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutDirection")] public string _Surrogate_Attribute_LayoutDirection {
             get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
-            set => LayoutDirection = value != "" ? System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value) : null;
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_LayoutMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.LayoutDirection")] public string _Surrogate_Element_LayoutDirection {
+            get => LayoutDirection != null ? ((Godot.Control.LayoutDirectionEnum)LayoutDirection).ToString() : "";
+            set { if (value != "") { LayoutDirection = System.Enum.Parse<Godot.Control.LayoutDirectionEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.LayoutDirectionEnum? LayoutDirection { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LayoutMode")] public string _Surrogate_Attribute_LayoutMode {
             get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
-            set => LayoutMode = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_AnchorsPreset {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.LayoutMode")] public string _Surrogate_Element_LayoutMode {
+            get => LayoutMode != null ? ((System.Int32)LayoutMode).ToString() : "";
+            set { if (value != "") { LayoutMode = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LayoutMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorsPreset")] public string _Surrogate_Attribute_AnchorsPreset {
             get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
-            set => AnchorsPreset = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_AnchorLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AnchorsPreset")] public string _Surrogate_Element_AnchorsPreset {
+            get => AnchorsPreset != null ? ((System.Int32)AnchorsPreset).ToString() : "";
+            set { if (value != "") { AnchorsPreset = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? AnchorsPreset { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorLeft")] public string _Surrogate_Attribute_AnchorLeft {
             get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
-            set => AnchorLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_AnchorTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AnchorLeft")] public string _Surrogate_Element_AnchorLeft {
+            get => AnchorLeft != null ? ((System.Single)AnchorLeft).ToString() : "";
+            set { if (value != "") { AnchorLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorTop")] public string _Surrogate_Attribute_AnchorTop {
             get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
-            set => AnchorTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_AnchorRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AnchorTop")] public string _Surrogate_Element_AnchorTop {
+            get => AnchorTop != null ? ((System.Single)AnchorTop).ToString() : "";
+            set { if (value != "") { AnchorTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorRight")] public string _Surrogate_Attribute_AnchorRight {
             get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
-            set => AnchorRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_AnchorBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AnchorRight")] public string _Surrogate_Element_AnchorRight {
+            get => AnchorRight != null ? ((System.Single)AnchorRight).ToString() : "";
+            set { if (value != "") { AnchorRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AnchorBottom")] public string _Surrogate_Attribute_AnchorBottom {
             get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
-            set => AnchorBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_OffsetLeft {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AnchorBottom")] public string _Surrogate_Element_AnchorBottom {
+            get => AnchorBottom != null ? ((System.Single)AnchorBottom).ToString() : "";
+            set { if (value != "") { AnchorBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? AnchorBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetLeft")] public string _Surrogate_Attribute_OffsetLeft {
             get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
-            set => OffsetLeft = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_OffsetTop {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.OffsetLeft")] public string _Surrogate_Element_OffsetLeft {
+            get => OffsetLeft != null ? ((System.Single)OffsetLeft).ToString() : "";
+            set { if (value != "") { OffsetLeft = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetLeft { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetTop")] public string _Surrogate_Attribute_OffsetTop {
             get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
-            set => OffsetTop = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_OffsetRight {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.OffsetTop")] public string _Surrogate_Element_OffsetTop {
+            get => OffsetTop != null ? ((System.Single)OffsetTop).ToString() : "";
+            set { if (value != "") { OffsetTop = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetTop { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetRight")] public string _Surrogate_Attribute_OffsetRight {
             get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
-            set => OffsetRight = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_OffsetBottom {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.OffsetRight")] public string _Surrogate_Element_OffsetRight {
+            get => OffsetRight != null ? ((System.Single)OffsetRight).ToString() : "";
+            set { if (value != "") { OffsetRight = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetRight { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "OffsetBottom")] public string _Surrogate_Attribute_OffsetBottom {
             get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
-            set => OffsetBottom = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_GrowHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.OffsetBottom")] public string _Surrogate_Element_OffsetBottom {
+            get => OffsetBottom != null ? ((System.Single)OffsetBottom).ToString() : "";
+            set { if (value != "") { OffsetBottom = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? OffsetBottom { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowHorizontal")] public string _Surrogate_Attribute_GrowHorizontal {
             get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
-            set => GrowHorizontal = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_GrowVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.GrowHorizontal")] public string _Surrogate_Element_GrowHorizontal {
+            get => GrowHorizontal != null ? ((Godot.Control.GrowDirection)GrowHorizontal).ToString() : "";
+            set { if (value != "") { GrowHorizontal = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "GrowVertical")] public string _Surrogate_Attribute_GrowVertical {
             get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
-            set => GrowVertical = value != "" ? System.Enum.Parse<Godot.Control.GrowDirection>(value) : null;
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Rotation {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.GrowVertical")] public string _Surrogate_Element_GrowVertical {
+            get => GrowVertical != null ? ((Godot.Control.GrowDirection)GrowVertical).ToString() : "";
+            set { if (value != "") { GrowVertical = System.Enum.Parse<Godot.Control.GrowDirection>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.GrowDirection? GrowVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Rotation")] public string _Surrogate_Attribute_Rotation {
             get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
-            set => Rotation = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_RotationDegrees {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Rotation")] public string _Surrogate_Element_Rotation {
+            get => Rotation != null ? ((System.Single)Rotation).ToString() : "";
+            set { if (value != "") { Rotation = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? Rotation { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "RotationDegrees")] public string _Surrogate_Attribute_RotationDegrees {
             get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
-            set => RotationDegrees = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_SizeFlagsHorizontal {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.RotationDegrees")] public string _Surrogate_Element_RotationDegrees {
+            get => RotationDegrees != null ? ((System.Single)RotationDegrees).ToString() : "";
+            set { if (value != "") { RotationDegrees = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? RotationDegrees { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsHorizontal")] public string _Surrogate_Attribute_SizeFlagsHorizontal {
             get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
-            set => SizeFlagsHorizontal = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_SizeFlagsVertical {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.SizeFlagsHorizontal")] public string _Surrogate_Element_SizeFlagsHorizontal {
+            get => SizeFlagsHorizontal != null ? ((Godot.Control.SizeFlags)SizeFlagsHorizontal).ToString() : "";
+            set { if (value != "") { SizeFlagsHorizontal = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsHorizontal { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsVertical")] public string _Surrogate_Attribute_SizeFlagsVertical {
             get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
-            set => SizeFlagsVertical = value != "" ? System.Enum.Parse<Godot.Control.SizeFlags>(value) : null;
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_SizeFlagsStretchRatio {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.SizeFlagsVertical")] public string _Surrogate_Element_SizeFlagsVertical {
+            get => SizeFlagsVertical != null ? ((Godot.Control.SizeFlags)SizeFlagsVertical).ToString() : "";
+            set { if (value != "") { SizeFlagsVertical = System.Enum.Parse<Godot.Control.SizeFlags>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.SizeFlags? SizeFlagsVertical { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SizeFlagsStretchRatio")] public string _Surrogate_Attribute_SizeFlagsStretchRatio {
             get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
-            set => SizeFlagsStretchRatio = value != "" ? System.Single.Parse(value) : null;
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_AutoTranslate {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.SizeFlagsStretchRatio")] public string _Surrogate_Element_SizeFlagsStretchRatio {
+            get => SizeFlagsStretchRatio != null ? ((System.Single)SizeFlagsStretchRatio).ToString() : "";
+            set { if (value != "") { SizeFlagsStretchRatio = System.Single.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Single? SizeFlagsStretchRatio { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "AutoTranslate")] public string _Surrogate_Attribute_AutoTranslate {
             get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
-            set => AutoTranslate = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_LocalizeNumeralSystem {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.AutoTranslate")] public string _Surrogate_Element_AutoTranslate {
+            get => AutoTranslate != null ? ((System.Boolean)AutoTranslate).ToString() : "";
+            set { if (value != "") { AutoTranslate = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? AutoTranslate { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LocalizeNumeralSystem")] public string _Surrogate_Attribute_LocalizeNumeralSystem {
             get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
-            set => LocalizeNumeralSystem = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_TooltipText {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.LocalizeNumeralSystem")] public string _Surrogate_Element_LocalizeNumeralSystem {
+            get => LocalizeNumeralSystem != null ? ((System.Boolean)LocalizeNumeralSystem).ToString() : "";
+            set { if (value != "") { LocalizeNumeralSystem = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? LocalizeNumeralSystem { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TooltipText")] public string _Surrogate_Attribute_TooltipText {
             get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
-            set => TooltipText = value != "" ? value : null;
+            set { if (value != "") { TooltipText = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_FocusMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TooltipText")] public string _Surrogate_Element_TooltipText {
+            get => TooltipText != null ? ((System.String)TooltipText).ToString() : "";
+            set { if (value != "") { TooltipText = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? TooltipText { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "FocusMode")] public string _Surrogate_Attribute_FocusMode {
             get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
-            set => FocusMode = value != "" ? System.Enum.Parse<Godot.Control.FocusModeEnum>(value) : null;
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_MouseFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.FocusMode")] public string _Surrogate_Element_FocusMode {
+            get => FocusMode != null ? ((Godot.Control.FocusModeEnum)FocusMode).ToString() : "";
+            set { if (value != "") { FocusMode = System.Enum.Parse<Godot.Control.FocusModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.FocusModeEnum? FocusMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseFilter")] public string _Surrogate_Attribute_MouseFilter {
             get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
-            set => MouseFilter = value != "" ? System.Enum.Parse<Godot.Control.MouseFilterEnum>(value) : null;
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_MouseForcePassScrollEvents {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.MouseFilter")] public string _Surrogate_Element_MouseFilter {
+            get => MouseFilter != null ? ((Godot.Control.MouseFilterEnum)MouseFilter).ToString() : "";
+            set { if (value != "") { MouseFilter = System.Enum.Parse<Godot.Control.MouseFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.MouseFilterEnum? MouseFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseForcePassScrollEvents")] public string _Surrogate_Attribute_MouseForcePassScrollEvents {
             get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
-            set => MouseForcePassScrollEvents = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_MouseDefaultCursorShape {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.MouseForcePassScrollEvents")] public string _Surrogate_Element_MouseForcePassScrollEvents {
+            get => MouseForcePassScrollEvents != null ? ((System.Boolean)MouseForcePassScrollEvents).ToString() : "";
+            set { if (value != "") { MouseForcePassScrollEvents = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? MouseForcePassScrollEvents { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "MouseDefaultCursorShape")] public string _Surrogate_Attribute_MouseDefaultCursorShape {
             get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
-            set => MouseDefaultCursorShape = value != "" ? System.Enum.Parse<Godot.Control.CursorShape>(value) : null;
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Visible {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.MouseDefaultCursorShape")] public string _Surrogate_Element_MouseDefaultCursorShape {
+            get => MouseDefaultCursorShape != null ? ((Godot.Control.CursorShape)MouseDefaultCursorShape).ToString() : "";
+            set { if (value != "") { MouseDefaultCursorShape = System.Enum.Parse<Godot.Control.CursorShape>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Control.CursorShape? MouseDefaultCursorShape { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "Visible")] public string _Surrogate_Attribute_Visible {
             get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
-            set => Visible = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_ShowBehindParent {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.Visible")] public string _Surrogate_Element_Visible {
+            get => Visible != null ? ((System.Boolean)Visible).ToString() : "";
+            set { if (value != "") { Visible = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? Visible { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ShowBehindParent")] public string _Surrogate_Attribute_ShowBehindParent {
             get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
-            set => ShowBehindParent = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_TopLevel {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ShowBehindParent")] public string _Surrogate_Element_ShowBehindParent {
+            get => ShowBehindParent != null ? ((System.Boolean)ShowBehindParent).ToString() : "";
+            set { if (value != "") { ShowBehindParent = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ShowBehindParent { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TopLevel")] public string _Surrogate_Attribute_TopLevel {
             get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
-            set => TopLevel = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_ClipChildren {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TopLevel")] public string _Surrogate_Element_TopLevel {
+            get => TopLevel != null ? ((System.Boolean)TopLevel).ToString() : "";
+            set { if (value != "") { TopLevel = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? TopLevel { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ClipChildren")] public string _Surrogate_Attribute_ClipChildren {
             get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
-            set => ClipChildren = value != "" ? System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value) : null;
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_LightMask {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ClipChildren")] public string _Surrogate_Element_ClipChildren {
+            get => ClipChildren != null ? ((Godot.CanvasItem.ClipChildrenMode)ClipChildren).ToString() : "";
+            set { if (value != "") { ClipChildren = System.Enum.Parse<Godot.CanvasItem.ClipChildrenMode>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.ClipChildrenMode? ClipChildren { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "LightMask")] public string _Surrogate_Attribute_LightMask {
             get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
-            set => LightMask = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_VisibilityLayer {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.LightMask")] public string _Surrogate_Element_LightMask {
+            get => LightMask != null ? ((System.Int32)LightMask).ToString() : "";
+            set { if (value != "") { LightMask = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? LightMask { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "VisibilityLayer")] public string _Surrogate_Attribute_VisibilityLayer {
             get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
-            set => VisibilityLayer = value != "" ? System.UInt32.Parse(value) : null;
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_ZIndex {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.VisibilityLayer")] public string _Surrogate_Element_VisibilityLayer {
+            get => VisibilityLayer != null ? ((System.UInt32)VisibilityLayer).ToString() : "";
+            set { if (value != "") { VisibilityLayer = System.UInt32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.UInt32? VisibilityLayer { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZIndex")] public string _Surrogate_Attribute_ZIndex {
             get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
-            set => ZIndex = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_ZAsRelative {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ZIndex")] public string _Surrogate_Element_ZIndex {
+            get => ZIndex != null ? ((System.Int32)ZIndex).ToString() : "";
+            set { if (value != "") { ZIndex = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ZIndex { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ZAsRelative")] public string _Surrogate_Attribute_ZAsRelative {
             get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
-            set => ZAsRelative = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_YSortEnabled {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ZAsRelative")] public string _Surrogate_Element_ZAsRelative {
+            get => ZAsRelative != null ? ((System.Boolean)ZAsRelative).ToString() : "";
+            set { if (value != "") { ZAsRelative = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? ZAsRelative { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "YSortEnabled")] public string _Surrogate_Attribute_YSortEnabled {
             get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
-            set => YSortEnabled = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_TextureFilter {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.YSortEnabled")] public string _Surrogate_Element_YSortEnabled {
+            get => YSortEnabled != null ? ((System.Boolean)YSortEnabled).ToString() : "";
+            set { if (value != "") { YSortEnabled = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? YSortEnabled { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureFilter")] public string _Surrogate_Attribute_TextureFilter {
             get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
-            set => TextureFilter = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value) : null;
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_TextureRepeat {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TextureFilter")] public string _Surrogate_Element_TextureFilter {
+            get => TextureFilter != null ? ((Godot.CanvasItem.TextureFilterEnum)TextureFilter).ToString() : "";
+            set { if (value != "") { TextureFilter = System.Enum.Parse<Godot.CanvasItem.TextureFilterEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureFilterEnum? TextureFilter { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureRepeat")] public string _Surrogate_Attribute_TextureRepeat {
             get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
-            set => TextureRepeat = value != "" ? System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value) : null;
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_UseParentMaterial {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.TextureRepeat")] public string _Surrogate_Element_TextureRepeat {
+            get => TextureRepeat != null ? ((Godot.CanvasItem.TextureRepeatEnum)TextureRepeat).ToString() : "";
+            set { if (value != "") { TextureRepeat = System.Enum.Parse<Godot.CanvasItem.TextureRepeatEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.CanvasItem.TextureRepeatEnum? TextureRepeat { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UseParentMaterial")] public string _Surrogate_Attribute_UseParentMaterial {
             get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
-            set => UseParentMaterial = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_UniqueNameInOwner {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.UseParentMaterial")] public string _Surrogate_Element_UseParentMaterial {
+            get => UseParentMaterial != null ? ((System.Boolean)UseParentMaterial).ToString() : "";
+            set { if (value != "") { UseParentMaterial = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UseParentMaterial { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "UniqueNameInOwner")] public string _Surrogate_Attribute_UniqueNameInOwner {
             get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
-            set => UniqueNameInOwner = value != "" ? System.Boolean.Parse(value) : null;
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_SceneFilePath {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.UniqueNameInOwner")] public string _Surrogate_Element_UniqueNameInOwner {
+            get => UniqueNameInOwner != null ? ((System.Boolean)UniqueNameInOwner).ToString() : "";
+            set { if (value != "") { UniqueNameInOwner = System.Boolean.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Boolean? UniqueNameInOwner { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "SceneFilePath")] public string _Surrogate_Attribute_SceneFilePath {
             get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
-            set => SceneFilePath = value != "" ? value : null;
+            set { if (value != "") { SceneFilePath = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_ProcessMode {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.SceneFilePath")] public string _Surrogate_Element_SceneFilePath {
+            get => SceneFilePath != null ? ((System.String)SceneFilePath).ToString() : "";
+            set { if (value != "") { SceneFilePath = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? SceneFilePath { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessMode")] public string _Surrogate_Attribute_ProcessMode {
             get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
-            set => ProcessMode = value != "" ? System.Enum.Parse<Godot.Node.ProcessModeEnum>(value) : null;
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_ProcessPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessMode")] public string _Surrogate_Element_ProcessMode {
+            get => ProcessMode != null ? ((Godot.Node.ProcessModeEnum)ProcessMode).ToString() : "";
+            set { if (value != "") { ProcessMode = System.Enum.Parse<Godot.Node.ProcessModeEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessModeEnum? ProcessMode { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPriority")] public string _Surrogate_Attribute_ProcessPriority {
             get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
-            set => ProcessPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_ProcessPhysicsPriority {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessPriority")] public string _Surrogate_Element_ProcessPriority {
+            get => ProcessPriority != null ? ((System.Int32)ProcessPriority).ToString() : "";
+            set { if (value != "") { ProcessPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessPhysicsPriority")] public string _Surrogate_Attribute_ProcessPhysicsPriority {
             get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
-            set => ProcessPhysicsPriority = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_ProcessThreadGroup {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessPhysicsPriority")] public string _Surrogate_Element_ProcessPhysicsPriority {
+            get => ProcessPhysicsPriority != null ? ((System.Int32)ProcessPhysicsPriority).ToString() : "";
+            set { if (value != "") { ProcessPhysicsPriority = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessPhysicsPriority { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroup")] public string _Surrogate_Attribute_ProcessThreadGroup {
             get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
-            set => ProcessThreadGroup = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value) : null;
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_ProcessThreadGroupOrder {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessThreadGroup")] public string _Surrogate_Element_ProcessThreadGroup {
+            get => ProcessThreadGroup != null ? ((Godot.Node.ProcessThreadGroupEnum)ProcessThreadGroup).ToString() : "";
+            set { if (value != "") { ProcessThreadGroup = System.Enum.Parse<Godot.Node.ProcessThreadGroupEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadGroupEnum? ProcessThreadGroup { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadGroupOrder")] public string _Surrogate_Attribute_ProcessThreadGroupOrder {
             get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
-            set => ProcessThreadGroupOrder = value != "" ? System.Int32.Parse(value) : null;
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_ProcessThreadMessages {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessThreadGroupOrder")] public string _Surrogate_Element_ProcessThreadGroupOrder {
+            get => ProcessThreadGroupOrder != null ? ((System.Int32)ProcessThreadGroupOrder).ToString() : "";
+            set { if (value != "") { ProcessThreadGroupOrder = System.Int32.Parse(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.Int32? ProcessThreadGroupOrder { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "ProcessThreadMessages")] public string _Surrogate_Attribute_ProcessThreadMessages {
             get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
-            set => ProcessThreadMessages = value != "" ? System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value) : null;
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
         }
-        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages;
-        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_EditorDescription {
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.ProcessThreadMessages")] public string _Surrogate_Element_ProcessThreadMessages {
+            get => ProcessThreadMessages != null ? ((Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages).ToString() : "";
+            set { if (value != "") { ProcessThreadMessages = System.Enum.Parse<Godot.Node.ProcessThreadMessagesEnum>(value); } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public Godot.Node.ProcessThreadMessagesEnum? ProcessThreadMessages { get; set; }
+        [System.Xml.Serialization.XmlAttribute(AttributeName = "EditorDescription")] public string _Surrogate_Attribute_EditorDescription {
             get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
-            set => EditorDescription = value != "" ? value : null;
+            set { if (value != "") { EditorDescription = value; } }
         }
-        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription;
+        [System.Xml.Serialization.XmlElement(ElementName = "TextureProgressBar.EditorDescription")] public string _Surrogate_Element_EditorDescription {
+            get => EditorDescription != null ? ((System.String)EditorDescription).ToString() : "";
+            set { if (value != "") { EditorDescription = value; } }
+        }
+        [System.Xml.Serialization.XmlIgnore] public System.String? EditorDescription { get; set; }
 #nullable disable
 
-        // Overloaded Fields
+        // Overloaded Attributes
         [System.Xml.Serialization.XmlAttribute(AttributeName = "TextureProgressOffset")] public string _Surrogate_TextureProgressOffset {
             get => TextureProgressOffset != null ? ((Archwyvern.Nxml.Translators.Vector2)TextureProgressOffset).ToString() : "";
             set => TextureProgressOffset = value != "" ? value : null;
@@ -410,10 +774,12 @@ namespace Archwyvern.Nxml.Tags
         }
         [System.Xml.Serialization.XmlIgnore] public Archwyvern.Nxml.Translators.StringName? Name;
 
-        public override Godot.Node CreateNode()
+        internal override Godot.GodotObject CreateObject(Godot.GodotObject alt = null)
         {
-            var obj = new Godot.TextureProgressBar();
+            if (alt != null && alt is not Godot.TextureProgressBar) return alt;
+            var obj = (Godot.TextureProgressBar)alt ?? new Godot.TextureProgressBar();
 
+            // Attributes
             if (FillMode != null) obj.FillMode = (System.Int32)FillMode;
             if (NinePatchStretch != null) obj.NinePatchStretch = (System.Boolean)NinePatchStretch;
             if (StretchMarginLeft != null) obj.StretchMarginLeft = (System.Int32)StretchMarginLeft;
@@ -479,6 +845,7 @@ namespace Archwyvern.Nxml.Tags
             if (ProcessThreadGroupOrder != null) obj.ProcessThreadGroupOrder = (System.Int32)ProcessThreadGroupOrder;
             if (ProcessThreadMessages != null) obj.ProcessThreadMessages = (Godot.Node.ProcessThreadMessagesEnum)ProcessThreadMessages;
             if (EditorDescription != null) obj.EditorDescription = (System.String)EditorDescription;
+            // Overloaded Attributes
             if (TextureProgressOffset != null) obj.TextureProgressOffset = (Archwyvern.Nxml.Translators.Vector2)TextureProgressOffset;
             if (TintUnder != null) obj.TintUnder = (Archwyvern.Nxml.Translators.Color)TintUnder;
             if (TintOver != null) obj.TintOver = (Archwyvern.Nxml.Translators.Color)TintOver;
@@ -494,6 +861,42 @@ namespace Archwyvern.Nxml.Tags
             if (Modulate != null) obj.Modulate = (Archwyvern.Nxml.Translators.Color)Modulate;
             if (SelfModulate != null) obj.SelfModulate = (Archwyvern.Nxml.Translators.Color)SelfModulate;
             if (Name != null) obj.Name = (Archwyvern.Nxml.Translators.StringName)Name;
+            // Elements
+            if (TextureUnder != null) {
+                if (((IResourceTag)TextureUnder).ResourcePath != null) {
+                    obj.TextureUnder = (Godot.Texture2D)TextureUnder.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureUnder).ResourcePath));
+                } else {
+                    obj.TextureUnder = (Godot.Texture2D)TextureUnder.Generate();
+                }
+            }
+            if (TextureOver != null) {
+                if (((IResourceTag)TextureOver).ResourcePath != null) {
+                    obj.TextureOver = (Godot.Texture2D)TextureOver.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureOver).ResourcePath));
+                } else {
+                    obj.TextureOver = (Godot.Texture2D)TextureOver.Generate();
+                }
+            }
+            if (TextureProgress != null) {
+                if (((IResourceTag)TextureProgress).ResourcePath != null) {
+                    obj.TextureProgress = (Godot.Texture2D)TextureProgress.Generate(Godot.GD.Load<Godot.Texture2D>(((IResourceTag)TextureProgress).ResourcePath));
+                } else {
+                    obj.TextureProgress = (Godot.Texture2D)TextureProgress.Generate();
+                }
+            }
+            if (Theme != null) {
+                if (((IResourceTag)Theme).ResourcePath != null) {
+                    obj.Theme = (Godot.Theme)Theme.Generate(Godot.GD.Load<Godot.Theme>(((IResourceTag)Theme).ResourcePath));
+                } else {
+                    obj.Theme = (Godot.Theme)Theme.Generate();
+                }
+            }
+            if (Material != null) {
+                if (((IResourceTag)Material).ResourcePath != null) {
+                    obj.Material = (Godot.Material)Material.Generate(Godot.GD.Load<Godot.Material>(((IResourceTag)Material).ResourcePath));
+                } else {
+                    obj.Material = (Godot.Material)Material.Generate();
+                }
+            }
 
             return obj;
         }
